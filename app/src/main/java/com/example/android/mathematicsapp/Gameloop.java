@@ -1,8 +1,6 @@
 package com.example.android.mathematicsapp;
 
-import android.widget.RelativeLayout;
-
-public class Gameloop implements Runnable {
+class Gameloop implements Runnable {
 
     private SnakeActivity snakeActivity = new SnakeActivity();
     private Thread thread;
@@ -40,8 +38,6 @@ public class Gameloop implements Runnable {
     private void tick() {
         if (SnakeActivity.isSnakeGameReadyToUpdate) {
             if (tickNumber % 30 == 0) {
-                snakeActivity.snakeBody();
-//                System.out.println("gamecells size = " + SnakeActivity.gameCells.size());
             }
         }
     }

@@ -133,11 +133,24 @@ public class SnakeActivity extends AppCompatActivity {
 
         //ready for snake game!
         isSnakeGameReadyToUpdate = true;
+
+        new Gameloop();
     }
+
+
+    int k = 0;
 
     /** update snake body method */
     public void snakeBody() {
-        mColumn++;
-        gameCells.get(mColumn + (mRow * 20)).setBackgroundColor(getResources().getColor(R.color.snake_body));
+//        mColumn++;
+//        System.out.println("gamecells size (snakeactivity) = " + SnakeActivity.gameCells.size());
+//
+//        if (k == 0) {
+//            gameCells.get(15).addView(new Button(this));
+//            k++;
+//        }
+
+//        gameCells.get(mColumn + (mRow * 20)).setBackgroundColor(getResources().getColor(R.color.snake_body));
+//        SnakeActivity.gameCells.get(0).setBackgroundColor(getApplicationContext().getResources().getColor(R.color.snake_body));
     }
 }
