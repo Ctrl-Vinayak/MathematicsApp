@@ -2,26 +2,13 @@ package com.example.android.mathematicsapp;
 
 class Gameloop implements Runnable {
 
-    private SnakeActivity snakeActivity = new SnakeActivity();
-    private Thread thread;
-    private boolean isRunning = false;
     private final short FPS = 60;
     private short tickNumber = 0;
     private long targetTime = 1000 / FPS;
 
-    public Gameloop() {
-        start();
-    }
-
-    private void start() {
-        isRunning = true;
-        thread = new Thread(this);
-        thread.start();
-    }
-
     @Override
     public void run() {
-        while(isRunning) {
+        while(MainActivity.isRunning) {
 
             tick();
             tickNumber++;
@@ -36,9 +23,8 @@ class Gameloop implements Runnable {
     }
 
     private void tick() {
-        if (SnakeActivity.isSnakeGameReadyToUpdate) {
-            if (tickNumber % 30 == 0) {
-            }
+        if (tickNumber % 20 == 0) {
+            MainActivity.whichDirection();
         }
     }
 }
