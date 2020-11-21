@@ -12,12 +12,14 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO make main menu better.
     // TODO add the essential buttons...
-
     // TODO add how many coins you have in game.
     // TODO save the coins in game.
-
     // TODO add new activities for the buttons.
     // TODO add small hidden button for the snake game.
+
+    // TODO make a new project to test navigation component.
+    // TODO make categories for training mode.
+    // TODO make some questions for the practices in this app.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
