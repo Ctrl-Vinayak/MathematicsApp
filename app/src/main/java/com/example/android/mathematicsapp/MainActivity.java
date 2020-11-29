@@ -1,14 +1,10 @@
 package com.example.android.mathematicsapp;
 
-import android.content.Intent;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.view.Display;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.android.mathematicsapp.snakegame.SnakeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     // TODO add small hidden button for the snake game.
 
     // TODO make a new project to test navigation component.
+    // TODO make a new project to test save score for different times. (button clicks = how much score you have).
     // TODO make categories for training mode.
     // TODO make some questions for the practices in this app.
 

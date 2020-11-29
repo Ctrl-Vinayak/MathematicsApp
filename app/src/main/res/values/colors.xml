@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Mathematics Intro Color Res -->
+    <color name="intro_background">#131313</color>
+    <color name="mathematics_text">#fff</color>
+
+    <!-- Snake Color Res -->
     <color name="background_snake_begin">#7dd6cc</color>
     <color name="background_snake_screen">#585858</color>
     <color name="background_snake_input">#00a8f3</color>

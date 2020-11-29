@@ -1,4 +1,8 @@
 <resources>
+    <!-- Mathematics Intro String Res -->
+    <string name="mathematics">Mathematics</string>
+
+    <!-- Snake String Res -->
     <string name="app_name">MathematicsApp</string>
     <string name="current_score">Score: %s</string>
     <string name="last_score">Last score: %s</string>
