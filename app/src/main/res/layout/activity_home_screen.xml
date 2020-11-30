@@ -60,16 +60,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:text="@string/day_streak"
-                tools:text="6 day(s) streak"/>
+                android:text="@string/day_streak" />
 
             <TextView
                 android:id="@+id/something_of_goal_achieved"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="@string/x_of_200"
-                tools:text="512/200"/>
+                android:text="@string/x_of_200" />
 
         </LinearLayout>
     </RelativeLayout>
@@ -90,7 +88,8 @@
                 android:orientation="horizontal"
                 android:background="@drawable/customborder"
                 android:layout_marginLeft="5dp"
-                android:paddingRight="10dp">
+                android:paddingRight="10dp"
+                android:layout_marginStart="5dp">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -130,7 +129,8 @@
                 android:layout_marginLeft="10dp"
                 android:text="@string/current_date"
                 android:textSize="20sp"
-                tools:text="28-11-2020" />
+                tools:text="28-11-2020"
+                android:layout_marginStart="10dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -138,7 +138,8 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="5dp"
                 android:textSize="20sp"
-                android:text=" / " />
+                android:text="@string/seperator"
+                android:layout_marginStart="5dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -147,14 +148,124 @@
                 android:layout_marginLeft="5dp"
                 android:textSize="20sp"
                 android:text="@string/current_time"
-                tools:text="19:12:59" />
+                tools:text="19:12:59"
+                android:layout_marginStart="5dp" />
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/single_game_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="15dp"
+                    android:textSize="20sp"
+                    android:text="@string/single_game"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/ic_single"
+                    android:drawableStart="@drawable/ic_single" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/joint_game_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="15dp"
+                    android:textSize="20sp"
+                    android:text="@string/joint_game"
+                    android:drawableLeft="@drawable/ic_double"
+                    android:drawableStart="@drawable/ic_double" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/training_mode_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="15dp"
+                    android:textSize="20sp"
+                    android:text="@string/training_mode"
+                    android:drawableLeft="@drawable/ic_muscle"
+                    android:drawableStart="@drawable/ic_muscle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cookie_mode_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="15dp"
+                    android:textSize="20sp"
+                    android:text="@string/cookie_mode"
+                    android:drawableLeft="@drawable/ic_cookie"
+                    android:drawableStart="@drawable/ic_cookie" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/advancements_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="15dp"
+                    android:textSize="20sp"
+                    android:text="@string/advancements"
+                    android:drawableLeft="@drawable/ic_trophy"
+                    android:drawableStart="@drawable/ic_trophy" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/settings_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="15dp"
+                    android:textSize="20sp"
+                    android:text="@string/settings"
+                    android:drawableLeft="@drawable/ic_gear"
+                    android:drawableStart="@drawable/ic_gear" />
+
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

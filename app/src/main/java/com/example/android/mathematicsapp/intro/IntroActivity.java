@@ -32,7 +32,7 @@ public class IntroActivity extends AppCompatActivity implements Runnable {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
-
+        new HomeScreenActivity();
         findViewById(R.id.intro).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
