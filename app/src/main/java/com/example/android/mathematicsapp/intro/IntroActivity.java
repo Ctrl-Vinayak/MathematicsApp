@@ -2,6 +2,7 @@ package com.example.android.mathematicsapp.intro;
 
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -11,20 +12,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.vectordrawable.graphics.drawable.ArgbEvaluator;
 
 import com.example.android.mathematicsapp.R;
+import com.example.android.mathematicsapp.snakegame.SnakeActivity;
 
 import java.util.Random;
 
-public class IntroActivity extends AppCompatActivity {
+public class IntroActivity extends AppCompatActivity implements Runnable {
 
     private static final String TAG = "Intro";
-
-    private final long MILLIS_PER_SECOND = 1000;
-    private final int FPS = 60;
+    private long _launchStartedTime = System.currentTimeMillis();
+    private long _launchFinishedTime = System.currentTimeMillis() + 2000;
+    private Thread _thread;
     private boolean _isRunning;
-
-    private long _nextFrameTime = System.currentTimeMillis();
-
-    int test = 300;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,83 +30,75 @@ public class IntroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_intro);
     }
 
-//    public void update(int chooseRandomColor) {
-//        System.out.println("testtesttest + " + chooseRandomColor + " test = " + test);
-//        test--;
-//        if (test == 0) _isRunning = false;
-//    }
-//
-//    public boolean updateRequired() {
-//        if (_nextFrameTime <= System.currentTimeMillis()) {
-//            _nextFrameTime = System.currentTimeMillis() + MILLIS_PER_SECOND / FPS;
-//            return true;
-//        }
-//        return false;
-//    }
-
     @SuppressLint("RestrictedApi")
     @Override
     protected void onResume() {
         super.onResume();
         Random random = new Random();
-        final int chooseRandomColor = random.nextInt(4);
+        final int chooseRandomColor = random.nextInt(5);
+
+        switch (chooseRandomColor) {
+            case 0: {
+                ObjectAnimator.ofObject((TextView) findViewById(R.id.mathematics_text), "textColor", new ArgbEvaluator(), Color.WHITE, getResources().getColor(R.color.neon_blue)).setDuration(2000).start();
+                ((TextView) findViewById(R.id.mathematics_text)).setShadowLayer(64, 0,0, getResources().getColor(R.color.neon_blue));
+                break;
+            }
+            case 1: {
+                ObjectAnimator.ofObject((TextView) findViewById(R.id.mathematics_text), "textColor", new ArgbEvaluator(), Color.WHITE, getResources().getColor(R.color.neon_green)).setDuration(2000).start();
+                ((TextView) findViewById(R.id.mathematics_text)).setShadowLayer(64, 0,0, getResources().getColor(R.color.neon_green));
+                break;
+            }
+            case 2: {
+                ObjectAnimator.ofObject((TextView) findViewById(R.id.mathematics_text), "textColor", new ArgbEvaluator(), Color.WHITE, getResources().getColor(R.color.neon_yellow)).setDuration(2000).start();
+                ((TextView) findViewById(R.id.mathematics_text)).setShadowLayer(64, 0,0, getResources().getColor(R.color.neon_yellow));
+                break;
+            }
+            case 3: {
+                ObjectAnimator.ofObject((TextView) findViewById(R.id.mathematics_text), "textColor", new ArgbEvaluator(), Color.WHITE, getResources().getColor(R.color.neon_orange)).setDuration(2000).start();
+                ((TextView) findViewById(R.id.mathematics_text)).setShadowLayer(64, 0,0, getResources().getColor(R.color.neon_orange));
+                break;
+            }
+            case 4: {
+                ObjectAnimator.ofObject((TextView) findViewById(R.id.mathematics_text), "textColor", new ArgbEvaluator(), Color.WHITE, getResources().getColor(R.color.neon_red)).setDuration(2000).start();
+                ((TextView) findViewById(R.id.mathematics_text)).setShadowLayer(64, 0,0, getResources().getColor(R.color.neon_red));
+                break;
+            }
+        }
+
         _isRunning = true;
-
-//        runOnUiThread(new Runnable() {
-//            @Override
-//            public void run() {
-//                while (_isRunning) {
-//                    if (updateRequired()) {
-//                        update(chooseRandomColor);
-//                        if (test == 100) findViewById(R.id.mathematics_text).setBackgroundColor(getResources().getColor(R.color.food));
-//                    }
-//                }
-//            }
-//        });
-
-//        switch (chooseRandomColor) {
-//            case 0: {
-//                ObjectAnimator.ofObject((TextView) findViewById(R.id.mathematics_text), "textColor", new ArgbEvaluator(), Color.WHITE, Color.BLUE).setDuration(2000).start();
-//                ((TextView) findViewById(R.id.mathematics_text)).setShadowLayer(8, 0,0, 4);
-//                break;
-//            }
-//            case 1: {
-//                ObjectAnimator.ofObject((TextView) findViewById(R.id.mathematics_text), "textColor", new ArgbEvaluator(), Color.WHITE, Color.GREEN).setDuration(2000).start();
-//                break;
-//            }
-//            case 2: {
-//                ObjectAnimator.ofObject((TextView) findViewById(R.id.mathematics_text), "textColor", new ArgbEvaluator(), Color.WHITE, Color.YELLOW).setDuration(2000).start();
-//                break;
-//            }
-//            case 3: {
-//                ObjectAnimator.ofObject((TextView) findViewById(R.id.mathematics_text), "textColor", new ArgbEvaluator(), Color.WHITE, Color.RED).setDuration(2000).start();
-//                break;
-//            }
-//        }
-
-//        android:shadowColor="#cf1d1d"
-//        android:shadowDx="0.0"
-//        android:shadowDy="0.0"
-//        android:shadowRadius="8"
-
+        _thread = new Thread(this);
+        _thread.start();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         _isRunning = false;
-    }
-
-    private class TextAnimationAsyncTask extends AsyncTask<Void, Void, Void> {
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void aVoid) {
-            super.onPostExecute(aVoid);
+        try {
+            _thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
+
+    @Override
+    public void run() {
+        _launchStartedTime = System.currentTimeMillis();
+        while (_isRunning) {
+            if (updateRequired()) {
+                Intent intent = new Intent(this, SnakeActivity.class);
+                startActivity(intent);
+                _isRunning = false;
+
+            }
+        }
+    }
+
+    public boolean updateRequired() {
+        if (_launchFinishedTime <= System.currentTimeMillis()) {
+            return true;
+        }
+        return false;
+    }
+
 }

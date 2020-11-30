@@ -3,6 +3,11 @@
     <!-- Mathematics Intro Color Res -->
     <color name="intro_background">#131313</color>
     <color name="mathematics_text">#fff</color>
+    <color name="neon_blue">#00ffff</color>
+    <color name="neon_green">#00ff00</color>
+    <color name="neon_yellow">#ffff00</color>
+    <color name="neon_orange">#fa0</color>
+    <color name="neon_red">#f00</color>
 
     <!-- Snake Color Res -->
     <color name="background_snake_begin">#7dd6cc</color>
