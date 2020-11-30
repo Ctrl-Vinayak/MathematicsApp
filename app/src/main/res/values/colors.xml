@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Launcher Icon Background Color -->
+    <color name="ic_launcher_background">#3BB3DB</color>
+
     <!-- Mathematics Intro Color Res -->
     <color name="intro_background">#131313</color>
     <color name="mathematics_text">#fff</color>
