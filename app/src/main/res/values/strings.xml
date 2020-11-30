@@ -3,8 +3,14 @@
     <string name="mathematics">Mathematics</string>
 
     <!-- Mathematics Home Screen String Res -->
-    <string name="exp">%s</string>
+    <string name="exp">%s exp</string>
     <string name="total">total</string>
+    <string name="diagram">diagram</string>
+    <string name="day_streak">$s day(s) streak</string>
+    <string name="x_of_200">$s / 200</string>
+    <string name="cash">$s</string>
+    <string name="current_date">$s</string>
+    <string name="current_time">$s</string>
 
     <!-- Snake String Res -->
     <string name="app_name">MathematicsApp</string>
