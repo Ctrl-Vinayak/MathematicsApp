@@ -6,12 +6,16 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.vectordrawable.graphics.drawable.ArgbEvaluator;
 
 import com.example.android.mathematicsapp.R;
+import com.example.android.mathematicsapp.homescreen.HomeScreenActivity;
 import com.example.android.mathematicsapp.snakegame.SnakeActivity;
 
 import java.util.Random;
@@ -20,7 +24,7 @@ public class IntroActivity extends AppCompatActivity implements Runnable {
 
     private static final String TAG = "Intro";
     private long _launchStartedTime = System.currentTimeMillis();
-    private long _launchFinishedTime = System.currentTimeMillis() + 2000;
+    private long _launchFinishedTime = System.currentTimeMillis() + 2200;
     private Thread _thread;
     private boolean _isRunning;
 
@@ -28,6 +32,14 @@ public class IntroActivity extends AppCompatActivity implements Runnable {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
+
+        findViewById(R.id.intro).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(IntroActivity.this, HomeScreenActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @SuppressLint("RestrictedApi")
@@ -36,6 +48,7 @@ public class IntroActivity extends AppCompatActivity implements Runnable {
         super.onResume();
         Random random = new Random();
         final int chooseRandomColor = random.nextInt(5);
+        final int chooseZoomInOrNot = random.nextInt(20);
 
         switch (chooseRandomColor) {
             case 0: {
@@ -65,6 +78,14 @@ public class IntroActivity extends AppCompatActivity implements Runnable {
             }
         }
 
+        if (chooseZoomInOrNot == 19) {
+            Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom_in);
+            findViewById(R.id.mathematics_text).startAnimation(animation);
+        }
+
+        _launchStartedTime = System.currentTimeMillis();
+        _launchFinishedTime = _launchStartedTime + 2200;
+
         _isRunning = true;
         _thread = new Thread(this);
         _thread.start();
@@ -86,7 +107,7 @@ public class IntroActivity extends AppCompatActivity implements Runnable {
         _launchStartedTime = System.currentTimeMillis();
         while (_isRunning) {
             if (updateRequired()) {
-                Intent intent = new Intent(this, SnakeActivity.class);
+                Intent intent = new Intent(this, HomeScreenActivity.class);
                 startActivity(intent);
                 _isRunning = false;
 
@@ -100,5 +121,4 @@ public class IntroActivity extends AppCompatActivity implements Runnable {
         }
         return false;
     }
-
 }

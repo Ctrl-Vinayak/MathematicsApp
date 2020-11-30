@@ -9,6 +9,18 @@
     <color name="neon_orange">#fa0</color>
     <color name="neon_red">#f00</color>
 
+    <!-- Mathematics Settings Theme Color Res -->
+    <color name="light_bg">#fff</color>
+    <color name="dark_bg">#131313</color>
+    <color name="ocean_blue_bg">#0177BF</color>
+    <color name="light_pink_bg">#ffb6c1</color>
+
+    <color name="menu_blue_bar">#00ffff</color>
+    <color name="menu_green_bar">#00ff00</color>
+    <color name="menu_yellow_bar">#ffff00</color>
+    <color name="menu_orange_bar">#fa0</color>
+    <color name="menu_red_bar">#f00</color>
+
     <!-- Snake Color Res -->
     <color name="background_snake_begin">#7dd6cc</color>
     <color name="background_snake_screen">#585858</color>

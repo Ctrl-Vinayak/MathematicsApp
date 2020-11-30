@@ -2,6 +2,10 @@
     <!-- Mathematics Intro String Res -->
     <string name="mathematics">Mathematics</string>
 
+    <!-- Mathematics Home Screen String Res -->
+    <string name="exp">%s</string>
+    <string name="total">total</string>
+
     <!-- Snake String Res -->
     <string name="app_name">MathematicsApp</string>
     <string name="current_score">Score: %s</string>

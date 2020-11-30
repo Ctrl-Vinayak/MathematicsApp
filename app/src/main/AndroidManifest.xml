@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".homescreen.HomeScreenActivity"
+            android:screenOrientation="sensorPortrait">
+        </activity>
         <activity android:name=".snakegame.SnakeActivity"
             android:screenOrientation="sensorPortrait">
         </activity>
