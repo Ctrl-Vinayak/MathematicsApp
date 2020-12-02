@@ -6,12 +6,10 @@
     <string name="exp">%s exp</string>
     <string name="total">total</string>
     <string name="diagram">diagram</string>
-    <string name="day_streak">$s day streak</string>
-    <string name="x_of_200">$s / 200</string>
-    <string name="cash">$s</string>
-    <string name="current_date">$s</string>
-    <string name="seperator"> / </string>
-    <string name="current_time">$s</string>
+    <string name="day_streak">%s day(s) streak</string>
+    <string name="x_of_200">%s / 200</string>
+    <string name="cash">%s</string>
+    <string name="current_date">%s</string>
 
     <!-- Mathematics Home Screen Button String Res -->
     <string name="single_game">Single Game</string>

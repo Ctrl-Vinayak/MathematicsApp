@@ -60,14 +60,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:text="@string/day_streak" />
+                android:text="@string/day_streak"
+                tools:text="56 day(s) streak" />
 
             <TextView
                 android:id="@+id/something_of_goal_achieved"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="@string/x_of_200" />
+                android:text="@string/x_of_200"
+                tools:text="921 / 200" />
 
         </LinearLayout>
     </RelativeLayout>
@@ -97,11 +99,12 @@
                     android:src="@drawable/ic_cashbag" />
 
                 <TextView
+                    android:id="@+id/cash_num"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="@string/cash"
                     android:textSize="16sp"
+                    android:text="@string/cash"
                     tools:text="576" />
 
             </LinearLayout>
@@ -123,6 +126,7 @@
                 android:src="@drawable/ic_snake" />
 
             <TextView
+                android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -131,25 +135,6 @@
                 android:textSize="20sp"
                 tools:text="28-11-2020"
                 android:layout_marginStart="10dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="5dp"
-                android:textSize="20sp"
-                android:text="@string/seperator"
-                android:layout_marginStart="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="5dp"
-                android:textSize="20sp"
-                android:text="@string/current_time"
-                tools:text="19:12:59"
-                android:layout_marginStart="5dp" />
 
         </LinearLayout>
         <LinearLayout

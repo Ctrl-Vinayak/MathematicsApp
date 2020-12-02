@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO make main menu better.
     // TODO add the essential buttons...
     // TODO add how many coins you have in game.
     // TODO save the coins in game.
