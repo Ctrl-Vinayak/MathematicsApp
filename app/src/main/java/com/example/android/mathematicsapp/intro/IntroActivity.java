@@ -4,7 +4,6 @@ import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -16,7 +15,6 @@ import androidx.vectordrawable.graphics.drawable.ArgbEvaluator;
 
 import com.example.android.mathematicsapp.R;
 import com.example.android.mathematicsapp.homescreen.HomeScreenActivity;
-import com.example.android.mathematicsapp.snakegame.SnakeActivity;
 
 import java.util.Random;
 
