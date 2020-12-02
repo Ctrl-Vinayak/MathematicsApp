@@ -13,7 +13,7 @@
     <color name="neon_red">#f00</color>
 
     <!-- Mathematics Settings Theme Color Res -->
-    <color name="light_bg">#fff</color>
+    <color name="light_bg">#D8D8D8</color>
     <color name="dark_bg">#131313</color>
     <color name="ocean_blue_bg">#0177BF</color>
     <color name="light_pink_bg">#ffb6c1</color>

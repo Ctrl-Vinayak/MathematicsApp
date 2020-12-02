@@ -22,6 +22,9 @@
         <activity android:name=".settings.SettingsActivity"
             android:screenOrientation="sensorPortrait">
         </activity>
+        <activity android:name=".settings.theme.ThemeActivity"
+            android:screenOrientation="sensorPortrait">
+        </activity>
         <activity android:name=".snakegame.SnakeActivity"
             android:screenOrientation="sensorPortrait">
         </activity>

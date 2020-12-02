@@ -19,6 +19,11 @@
     <string name="advancements">Advancements</string>
     <string name="settings">Settings</string>
 
+    <!-- Mathematics Settings String Res -->
+    <string name="theme">THEME</string>
+    <string name="numpad">NUMPAD</string>
+    <string name="reset_style">Reset Style</string>
+
     <!-- Snake String Res -->
     <string name="app_name">MathematicsApp</string>
     <string name="current_score">Score: %s</string>

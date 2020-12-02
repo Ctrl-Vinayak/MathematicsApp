@@ -37,6 +37,7 @@
             android:layout_weight="1">
 
             <LinearLayout
+                android:id="@+id/theme_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -53,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="38sp"
-                    android:text="THEME" />
+                    android:text="@string/theme" />
 
             </LinearLayout>
 
@@ -64,6 +65,7 @@
             android:layout_weight="1">
 
             <LinearLayout
+                android:id="@+id/numpad_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -80,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="38sp"
-                    android:text="THEME" />
+                    android:text="@string/numpad" />
 
             </LinearLayout>
         </RelativeLayout>
