@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
 import com.example.android.mathematicsapp.settings.SettingsActivity;
+import com.example.android.mathematicsapp.settings.theme.ThemeActivity;
 
 public class HomeScreenActivity extends AppCompatActivity {
 
@@ -24,6 +25,9 @@ public class HomeScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen);
         changeText();
         buttonIntents();
+
+//        ThemeActivity themeActivity = new ThemeActivity();
+//        findViewById(R.id.home_screen_bg).setBackgroundColor(themeActivity.getData());
     }
 
     private void changeText() {

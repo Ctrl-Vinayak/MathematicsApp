@@ -6,6 +6,7 @@
     android:orientation="vertical" >
 
     <RelativeLayout
+        android:id="@+id/setting_action_bar"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@color/menu_blue_bar">
