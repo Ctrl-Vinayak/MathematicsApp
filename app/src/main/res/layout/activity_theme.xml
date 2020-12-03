@@ -27,6 +27,7 @@
 
     </RelativeLayout>
     <LinearLayout
+        android:id="@+id/theme_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -75,7 +76,8 @@
                         android:layout_height="10dp"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:buttonTint="@color/check_border_color"/>
 
                 </LinearLayout>
 
@@ -109,7 +111,8 @@
                         android:layout_height="10dp"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:buttonTint="@color/check_border_color"/>
 
                 </LinearLayout>
 
@@ -150,7 +153,8 @@
                         android:layout_height="10dp"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:buttonTint="@color/check_border_color"/>
 
                 </LinearLayout>
                 <LinearLayout
@@ -183,7 +187,8 @@
                         android:layout_height="10dp"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
-                        android:layout_weight="1" />
+                        android:layout_weight="1"
+                        android:buttonTint="@color/check_border_color"/>
 
                 </LinearLayout>
 
@@ -212,6 +217,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/neon_blue_box"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -220,6 +226,7 @@
                         android:background="@color/neon_blue">
 
                         <View
+                            android:id="@+id/checkmark_neon_blue"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/ic_checkmark"/>
@@ -234,6 +241,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/neon_green_box"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -242,6 +250,7 @@
                         android:background="@color/neon_green">
 
                         <View
+                            android:id="@+id/checkmark_neon_green"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/ic_checkmark"/>
@@ -256,6 +265,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/neon_yellow_box"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -264,6 +274,7 @@
                         android:background="@color/neon_yellow">
 
                         <View
+                            android:id="@+id/checkmark_neon_yellow"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/ic_checkmark"/>
@@ -278,6 +289,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/neon_orange_box"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -286,6 +298,7 @@
                         android:background="@color/neon_orange">
 
                         <View
+                            android:id="@+id/checkmark_neon_orange"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/ic_checkmark"/>
@@ -300,6 +313,7 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
+                        android:id="@+id/neon_red_box"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
@@ -308,6 +322,7 @@
                         android:background="@color/neon_red">
 
                         <View
+                            android:id="@+id/checkmark_neon_red"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:background="@drawable/ic_checkmark"/>

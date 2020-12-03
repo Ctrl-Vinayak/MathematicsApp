@@ -13,7 +13,7 @@
     <color name="neon_red">#f00</color>
 
     <!-- Mathematics Settings Theme Color Res -->
-    <color name="light_bg">#D8D8D8</color>
+    <color name="light_bg">#fff</color>
     <color name="dark_bg">#131313</color>
     <color name="ocean_blue_bg">#0177BF</color>
     <color name="light_pink_bg">#ffb6c1</color>
@@ -23,6 +23,8 @@
     <color name="menu_yellow_bar">#ffff00</color>
     <color name="menu_orange_bar">#fa0</color>
     <color name="menu_red_bar">#f00</color>
+
+    <color name="check_border_color">#B2D830</color>
 
     <!-- Snake Color Res -->
     <color name="background_snake_begin">#7dd6cc</color>

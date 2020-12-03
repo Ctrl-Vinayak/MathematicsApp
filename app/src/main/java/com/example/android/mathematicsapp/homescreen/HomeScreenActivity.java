@@ -3,6 +3,7 @@ package com.example.android.mathematicsapp.homescreen;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +20,8 @@ public class HomeScreenActivity extends AppCompatActivity {
     private String _cash;
     private String _date;
 
+    private RelativeLayout _homeScreenActionBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +30,9 @@ public class HomeScreenActivity extends AppCompatActivity {
         buttonIntents();
 
 //        ThemeActivity themeActivity = new ThemeActivity();
-//        findViewById(R.id.home_screen_bg).setBackgroundColor(themeActivity.getData());
+//        themeActivity.loadData();
+//        _homeScreenActionBar = (RelativeLayout) findViewById(R.id.home_screen_action_bar);
+//        _homeScreenActionBar.setBackgroundColor(themeActivity.getNonBackgroundColor());
     }
 
     private void changeText() {
