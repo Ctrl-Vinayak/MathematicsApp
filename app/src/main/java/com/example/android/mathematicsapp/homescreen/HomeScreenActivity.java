@@ -1,8 +1,11 @@
 package com.example.android.mathematicsapp.homescreen;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -21,6 +24,11 @@ public class HomeScreenActivity extends AppCompatActivity {
     private String _date;
 
     private RelativeLayout _homeScreenActionBar;
+    private LinearLayout _homeScreenBackground;
+
+//    public HomeScreenActivity(Context context) {
+//
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +37,11 @@ public class HomeScreenActivity extends AppCompatActivity {
         changeText();
         buttonIntents();
 
-//        ThemeActivity themeActivity = new ThemeActivity();
-//        themeActivity.loadData();
-//        _homeScreenActionBar = (RelativeLayout) findViewById(R.id.home_screen_action_bar);
-//        _homeScreenActionBar.setBackgroundColor(themeActivity.getNonBackgroundColor());
+        SharedPreferences prefs = getApplicationContext().getSharedPreferences("SharedPrefKey", Context.MODE_PRIVATE);
+        _homeScreenActionBar = (RelativeLayout) findViewById(R.id.home_screen_action_bar);
+        _homeScreenBackground = (LinearLayout) findViewById(R.id.home_screen_bg);
+        _homeScreenActionBar.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
+        _homeScreenBackground.setBackgroundColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
     }
 
     private void changeText() {

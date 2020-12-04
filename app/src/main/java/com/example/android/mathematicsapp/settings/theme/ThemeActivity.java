@@ -307,6 +307,8 @@ public class ThemeActivity extends AppCompatActivity {
                 _checkMarkNeonYellow.setVisibility(View.GONE);
                 _checkMarkNeonOrange.setVisibility(View.GONE);
                 _checkMarkNeonRed.setVisibility(View.GONE);
+
+                saveData();
             }
         });
     }
@@ -315,13 +317,5 @@ public class ThemeActivity extends AppCompatActivity {
     private void changeThemeActivity() {
         _themeBg.setBackgroundColor(_currentBg);
         _actionBarBg.setBackgroundColor(_currentNonBg);
-    }
-
-    public int getBackgroundColor() {
-        return _currentBg;
-    }
-
-    public int getNonBackgroundColor() {
-        return _currentNonBg;
     }
 }
