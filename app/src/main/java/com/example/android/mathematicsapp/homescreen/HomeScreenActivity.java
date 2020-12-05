@@ -15,6 +15,10 @@ import com.example.android.mathematicsapp.R;
 import com.example.android.mathematicsapp.settings.SettingsActivity;
 import com.example.android.mathematicsapp.settings.theme.ThemeActivity;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class HomeScreenActivity extends AppCompatActivity {
 
     private String _exp;
@@ -25,10 +29,6 @@ public class HomeScreenActivity extends AppCompatActivity {
 
     private RelativeLayout _homeScreenActionBar;
     private LinearLayout _homeScreenBackground;
-
-//    public HomeScreenActivity(Context context) {
-//
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,9 +61,12 @@ public class HomeScreenActivity extends AppCompatActivity {
         TextView cash = (TextView) findViewById(R.id.cash_num);
         cash.setText(String.format(_cash, "5513"));
 
+        Date date = new Date();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        String strDate= formatter.format(date);
         _date = getApplicationContext().getString(R.string.current_date);
-        TextView date = (TextView) findViewById(R.id.date);
-        date.setText(String.format(_date, "12-05-2020"));
+        TextView dateTv = (TextView) findViewById(R.id.date);
+        dateTv.setText(String.format(_date, strDate));
     }
 
     private void buttonIntents() {

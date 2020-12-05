@@ -12,88 +12,90 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
-        android:background="@color/menu_blue_bar">
+        tools:background="@color/neon_orange">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/exp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
                 android:text="@string/exp"
-                tools:text="11608 exp"/>
+                android:textSize="18sp"
+                tools:text="11608 exp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="@string/total"/>
+                android:text="@string/total"
+                android:textSize="16sp" />
 
         </LinearLayout>
+
         <ImageView
             android:id="@+id/exp_daily_diagram"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
-            android:src="@drawable/ic_diagram"
             android:contentDescription="@string/diagram"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="10dp" />
+            android:src="@drawable/ic_diagram" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/exp_daily_diagram">
+            android:layout_toLeftOf="@id/exp_daily_diagram"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/day_streak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
                 android:text="@string/day_streak"
+                android:textSize="18sp"
                 tools:text="56 day(s) streak" />
 
             <TextView
                 android:id="@+id/something_of_goal_achieved"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
                 android:text="@string/x_of_200"
+                android:textSize="16sp"
                 tools:text="921 / 200" />
 
         </LinearLayout>
     </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/home_screen_bg"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="5dp">
+            android:layout_marginTop="10dp">
 
             <LinearLayout
+                android:id="@+id/cash_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@drawable/customborder"
-                android:layout_marginLeft="5dp"
+                android:background="@color/neon_orange"
+                android:layout_marginLeft="15dp"
                 android:paddingRight="10dp"
-                android:layout_marginStart="5dp">
+                android:layout_marginStart="15dp">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -104,7 +106,7 @@
                     android:id="@+id/cash_num"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
+                    android:layout_gravity="center"
                     android:textSize="16sp"
                     android:text="@string/cash"
                     tools:text="576" />
@@ -112,147 +114,184 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/lock_image"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@+id/cash_layout"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/customborder1"
+                android:background="@color/neon_orange"
                 android:src="@drawable/ic_lock" />
 
             <ImageView
+                android:id="@+id/snake_image"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@+id/lock_image"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/customborder1"
+                android:background="@color/neon_orange"
                 android:src="@drawable/ic_snake" />
 
-            <TextView
-                android:id="@+id/date"
+            <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@+id/snake_image"
+                android:layout_centerInParent="true"
                 android:layout_marginLeft="10dp"
-                android:text="@string/current_date"
-                android:textSize="20sp"
-                tools:text="28-11-2020"
-                android:layout_marginStart="10dp" />
+                android:layout_marginStart="10dp"
+                android:background="@color/neon_orange">
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/current_date"
+                    android:textSize="20sp"
+                    tools:text="28-11-2020" />
+
+            </RelativeLayout>
+        </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginTop="50dp">
+            android:layout_marginTop="30dp">
 
-            <LinearLayout
+            <RelativeLayout
+                android:id="@+id/single_game_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@drawable/customborder1"
+                android:layout_margin="15dp"
+                android:padding="3dp"
+                tools:background="@color/neon_orange">
 
-                <Button
-                    android:id="@+id/single_game_btn"
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_single" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="15dp"
-                    android:textSize="20sp"
-                    android:text="@string/single_game"
-                    android:drawablePadding="10dp"
-                    android:drawableLeft="@drawable/ic_single"
-                    android:drawableStart="@drawable/ic_single" />
+                    android:layout_centerInParent="true"
+                    android:textSize="30sp"
+                    android:text="@string/single_game" />
 
-            </LinearLayout>
-
-            <LinearLayout
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/joint_game_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@drawable/customborder1"
+                android:layout_margin="15dp"
+                android:padding="3dp"
+                tools:background="@color/neon_orange">
 
-                <Button
-                    android:id="@+id/joint_game_btn"
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_double" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="15dp"
-                    android:textSize="20sp"
-                    android:text="@string/joint_game"
-                    android:drawableLeft="@drawable/ic_double"
-                    android:drawableStart="@drawable/ic_double" />
+                    android:layout_centerInParent="true"
+                    android:textSize="30sp"
+                    android:text="@string/joint_game" />
 
-            </LinearLayout>
-
-            <LinearLayout
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/training_mode_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@drawable/customborder1"
+                android:layout_margin="15dp"
+                android:padding="3dp"
+                tools:background="@color/neon_orange">
 
-                <Button
-                    android:id="@+id/training_mode_btn"
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_muscle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="15dp"
-                    android:textSize="20sp"
-                    android:text="@string/training_mode"
-                    android:drawableLeft="@drawable/ic_muscle"
-                    android:drawableStart="@drawable/ic_muscle" />
+                    android:layout_centerInParent="true"
+                    android:textSize="30sp"
+                    android:text="@string/training_mode" />
 
-            </LinearLayout>
-
-            <LinearLayout
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/cookie_mode_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@drawable/customborder1"
+                android:layout_margin="15dp"
+                android:padding="3dp"
+                tools:background="@color/neon_orange">
 
-                <Button
-                    android:id="@+id/cookie_mode_btn"
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_cookie" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="15dp"
-                    android:textSize="20sp"
-                    android:text="@string/cookie_mode"
-                    android:drawableLeft="@drawable/ic_cookie"
-                    android:drawableStart="@drawable/ic_cookie" />
+                    android:layout_centerInParent="true"
+                    android:textSize="30sp"
+                    android:text="@string/cookie_mode" />
 
-            </LinearLayout>
-
-            <LinearLayout
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/advancements_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@drawable/customborder1"
+                android:layout_margin="15dp"
+                android:padding="3dp"
+                tools:background="@color/neon_orange">
 
-                <Button
-                    android:id="@+id/advancements_btn"
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_trophy" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="15dp"
-                    android:textSize="20sp"
-                    android:text="@string/advancements"
-                    android:drawableLeft="@drawable/ic_trophy"
-                    android:drawableStart="@drawable/ic_trophy" />
+                    android:layout_centerInParent="true"
+                    android:textSize="30sp"
+                    android:text="@string/advancements" />
 
-            </LinearLayout>
-
-            <LinearLayout
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/settings_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:background="@drawable/customborder1"
+                android:layout_margin="15dp"
+                android:padding="3dp"
+                tools:background="@color/neon_orange">
 
-                <Button
-                    android:id="@+id/settings_btn"
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_gear" />
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="15dp"
-                    android:textSize="20sp"
-                    android:text="@string/settings"
-                    android:drawableLeft="@drawable/ic_gear"
-                    android:drawableStart="@drawable/ic_gear" />
+                    android:layout_centerInParent="true"
+                    android:textSize="30sp"
+                    android:text="@string/settings" />
 
-            </LinearLayout>
+            </RelativeLayout>
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
