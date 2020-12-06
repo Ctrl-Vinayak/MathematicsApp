@@ -12,25 +12,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
 import com.example.android.mathematicsapp.homescreen.HomeScreenActivity;
-import com.example.android.mathematicsapp.settings.SettingsActivity;
-import com.example.android.mathematicsapp.settings.theme.ThemeActivity;
 
 public class SingleGameActivity extends AppCompatActivity {
+
+    private RelativeLayout _singleGameActionBar;
+    private LinearLayout _singleGameBackground;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_single_game);
-        backBtn();
-
-//        SharedPreferences prefs = getApplicationContext().getSharedPreferences("SharedPrefKey", Context.MODE_PRIVATE);
-//        _homeScreenActionBar = (RelativeLayout) findViewById(R.id.home_screen_action_bar);
-//        _homeScreenBackground = (LinearLayout) findViewById(R.id.home_screen_bg);
-//        _homeScreenActionBar.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
-//        _homeScreenBackground.setBackgroundColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        applyTheme();
+        changeText();
+        buttonIntents();
     }
 
-    private void backBtn() {
+    private void applyTheme() {
+        SharedPreferences prefs = getApplicationContext().getSharedPreferences("SharedPrefKey", Context.MODE_PRIVATE);
+        _singleGameActionBar = (RelativeLayout) findViewById(R.id.single_game_action_bar);
+        _singleGameBackground = (LinearLayout) findViewById(R.id.single_game_background);
+        _singleGameActionBar.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        _singleGameBackground.setBackgroundColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
+    }
+
+    private void changeText() {
+
+    }
+
+    private void buttonIntents() {
         findViewById(R.id.single_game_back_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -25,7 +25,7 @@
             android:text="@string/joint_game" />
     </RelativeLayout>
     <LinearLayout
-        android:id="@+id/joint_game_bg"
+        android:id="@+id/joint_game_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">

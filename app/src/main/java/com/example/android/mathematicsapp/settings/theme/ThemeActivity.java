@@ -94,7 +94,7 @@ public class ThemeActivity extends AppCompatActivity {
         _neonOrange = getApplicationContext().getResources().getColor(R.color.neon_orange);
         _neonRed = getApplicationContext().getResources().getColor(R.color.neon_red);
 
-        _themeBg = (LinearLayout) findViewById(R.id.theme_bg);
+        _themeBg = (LinearLayout) findViewById(R.id.theme_background);
         _actionBarBg = (RelativeLayout) findViewById(R.id.theme_action_bar);
         _resetStyle = (TextView) findViewById(R.id.reset_style_btn);
 

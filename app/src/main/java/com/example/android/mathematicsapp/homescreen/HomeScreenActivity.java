@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -32,6 +33,8 @@ public class HomeScreenActivity extends AppCompatActivity {
     private LinearLayout _homeScreenBackground;
 
     private LinearLayout _cashLayout;
+    private ImageView _lockImage;
+    private ImageView _snakeImage;
     private RelativeLayout _dateLayout;
 
     private RelativeLayout _single_game_btn;
@@ -45,60 +48,74 @@ public class HomeScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+        applyTheme();
+        changeText();
+        buttonIntents();
 
+        // TODO add here a new better condition then just "true".
+        if (true) {
+            findViewById(R.id.snake_image).setVisibility(View.GONE);
+        }
+    }
+
+    private void applyTheme() {
         SharedPreferences prefs = getApplicationContext().getSharedPreferences("SharedPrefKey", Context.MODE_PRIVATE);
         _homeScreenActionBar = (RelativeLayout) findViewById(R.id.home_screen_action_bar);
-        _homeScreenBackground = (LinearLayout) findViewById(R.id.home_screen_bg);
-        _homeScreenActionBar.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
-        _homeScreenBackground.setBackgroundColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        _homeScreenBackground = (LinearLayout) findViewById(R.id.home_screen_background);
+        _homeScreenActionBar.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        _homeScreenBackground.setBackgroundColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
 
-        GradientDrawable drawable;
-
+        // non buttons
         _cashLayout = (LinearLayout) findViewById(R.id.cash_layout);
         _cashLayout.setBackgroundResource(R.drawable.customborder1);
-        drawable = (GradientDrawable) _cashLayout.getBackground();
-        drawable.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        GradientDrawable drawableCashLayout = (GradientDrawable) _cashLayout.getBackground();
+        drawableCashLayout.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _lockImage = (ImageView) findViewById(R.id.lock_image);
+        _lockImage.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableLockImage = (GradientDrawable) _lockImage.getBackground();
+        drawableLockImage.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _snakeImage = (ImageView) findViewById(R.id.snake_image);
+        _snakeImage.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableSnakeImage = (GradientDrawable) _snakeImage.getBackground();
+        drawableSnakeImage.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
 
         _dateLayout = (RelativeLayout) findViewById(R.id.date_layout);
         _dateLayout.setBackgroundResource(R.drawable.customborder1);
-        drawable = (GradientDrawable) _dateLayout.getBackground();
-        drawable.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        GradientDrawable drawableDateLayout = (GradientDrawable) _dateLayout.getBackground();
+        drawableDateLayout.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
 
-        styleButtons(drawable, prefs);
-        changeText();
-        buttonIntents();
-    }
-
-    private void styleButtons(GradientDrawable drawable, SharedPreferences prefs) {
+        // buttons
         _single_game_btn = (RelativeLayout) findViewById(R.id.single_game_btn);
         _single_game_btn.setBackgroundResource(R.drawable.customborder1);
-        drawable = (GradientDrawable) _single_game_btn.getBackground();
-        drawable.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        GradientDrawable drawableSingleGame = (GradientDrawable) _single_game_btn.getBackground();
+        drawableSingleGame.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
 
         _joint_game_btn = (RelativeLayout) findViewById(R.id.joint_game_btn);
         _joint_game_btn.setBackgroundResource(R.drawable.customborder1);
-        drawable = (GradientDrawable) _joint_game_btn.getBackground();
-        drawable.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        GradientDrawable drawableJointGame = (GradientDrawable) _joint_game_btn.getBackground();
+        drawableJointGame.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
 
         _training_mode_btn = (RelativeLayout) findViewById(R.id.training_mode_btn);
         _training_mode_btn.setBackgroundResource(R.drawable.customborder1);
-        drawable = (GradientDrawable) _training_mode_btn.getBackground();
-        drawable.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        GradientDrawable drawableTrainingMode = (GradientDrawable) _training_mode_btn.getBackground();
+        drawableTrainingMode.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
 
         _cookie_mode_btn = (RelativeLayout) findViewById(R.id.cookie_mode_btn);
         _cookie_mode_btn.setBackgroundResource(R.drawable.customborder1);
-        drawable = (GradientDrawable) _cookie_mode_btn.getBackground();
-        drawable.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        GradientDrawable drawableCookieMode = (GradientDrawable) _cookie_mode_btn.getBackground();
+        drawableCookieMode.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
 
         _advancements_btn = (RelativeLayout) findViewById(R.id.advancements_btn);
         _advancements_btn.setBackgroundResource(R.drawable.customborder1);
-        drawable = (GradientDrawable) _advancements_btn.getBackground();
-        drawable.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        GradientDrawable drawableAdvancements = (GradientDrawable) _advancements_btn.getBackground();
+        drawableAdvancements.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
 
         _settings_btn = (RelativeLayout) findViewById(R.id.settings_btn);
         _settings_btn.setBackgroundResource(R.drawable.customborder1);
-        drawable = (GradientDrawable) _settings_btn.getBackground();
-        drawable.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        GradientDrawable drawableSettings = (GradientDrawable) _settings_btn.getBackground();
+        drawableSettings.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
     }
 
     private void changeText() {
