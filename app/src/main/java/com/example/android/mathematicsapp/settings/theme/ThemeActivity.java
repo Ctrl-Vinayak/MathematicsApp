@@ -317,5 +317,6 @@ public class ThemeActivity extends AppCompatActivity {
     private void changeThemeActivity() {
         _themeBg.setBackgroundColor(_currentBg);
         _actionBarBg.setBackgroundColor(_currentNonBg);
+        _resetStyle.setBackgroundColor(_currentNonBg);
     }
 }

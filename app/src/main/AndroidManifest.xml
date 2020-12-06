@@ -19,6 +19,12 @@
         <activity android:name=".homescreen.HomeScreenActivity"
             android:screenOrientation="sensorPortrait">
         </activity>
+        <activity android:name=".single_game.SingleGameActivity"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".joint_game.JointGameActivity"
+            android:screenOrientation="sensorPortrait">
+        </activity>
         <activity android:name=".settings.SettingsActivity"
             android:screenOrientation="sensorPortrait">
         </activity>

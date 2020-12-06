@@ -19,6 +19,9 @@ public class SettingsActivity extends AppCompatActivity {
     private RelativeLayout _settingsScreenActionBar;
     private LinearLayout _settingsScreenBackground;
 
+    private LinearLayout _themeBtn;
+    private LinearLayout _numpadBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +46,12 @@ public class SettingsActivity extends AppCompatActivity {
         SharedPreferences prefs = getApplicationContext().getSharedPreferences("SharedPrefKey", Context.MODE_PRIVATE);
         _settingsScreenActionBar = (RelativeLayout) findViewById(R.id.setting_action_bar);
         _settingsScreenBackground = (LinearLayout) findViewById(R.id.setting_bg);
-        _settingsScreenActionBar.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
-        _settingsScreenBackground.setBackgroundColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        _settingsScreenActionBar.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        _settingsScreenBackground.setBackgroundColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
+
+        _themeBtn = (LinearLayout) findViewById(R.id.theme_btn);
+        _numpadBtn = (LinearLayout) findViewById(R.id.numpad_btn);
+        _themeBtn.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+        _numpadBtn.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
     }
 }

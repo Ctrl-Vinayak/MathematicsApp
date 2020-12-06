@@ -55,7 +55,8 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@id/exp_daily_diagram"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_toStartOf="@id/exp_daily_diagram">
 
             <TextView
                 android:id="@+id/day_streak"
@@ -92,10 +93,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@color/neon_orange"
                 android:layout_marginLeft="15dp"
                 android:paddingRight="10dp"
-                android:layout_marginStart="15dp">
+                android:layout_marginStart="15dp"
+                android:paddingEnd="10dp">
 
                 <ImageView
                     android:layout_width="40dp"
@@ -113,34 +114,38 @@
 
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/lock_image"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                android:layout_toRightOf="@+id/cash_layout"
-                android:layout_marginLeft="10dp"
-                android:background="@color/neon_orange"
-                android:src="@drawable/ic_lock" />
+<!--            <ImageView-->
+<!--                android:id="@+id/lock_image"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_toRightOf="@+id/cash_layout"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:background="@drawable/customborder1"-->
+<!--                android:src="@drawable/ic_lock"-->
+<!--                android:layout_toEndOf="@+id/cash_layout"-->
+<!--                android:layout_marginStart="10dp" />-->
 
-            <ImageView
-                android:id="@+id/snake_image"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                android:layout_toRightOf="@+id/lock_image"
-                android:layout_marginLeft="10dp"
-                android:background="@color/neon_orange"
-                android:src="@drawable/ic_snake" />
+<!--            <ImageView-->
+<!--                android:id="@+id/snake_image"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_toRightOf="@+id/lock_image"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:background="@drawable/customborder1"-->
+<!--                android:src="@drawable/ic_snake"-->
+<!--                android:layout_toEndOf="@+id/lock_image"-->
+<!--                android:layout_marginStart="10dp" />-->
 
             <RelativeLayout
+                android:id="@+id/date_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_toRightOf="@+id/snake_image"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
-                android:background="@color/neon_orange">
+                android:layout_alignParentRight="true"
+                android:layout_marginHorizontal="15dp"
+                android:paddingHorizontal="12dp">
 
                 <TextView
                     android:id="@+id/date"
@@ -163,10 +168,8 @@
                 android:id="@+id/single_game_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/customborder1"
                 android:layout_margin="15dp"
-                android:padding="3dp"
-                tools:background="@color/neon_orange">
+                android:padding="3dp">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -185,10 +188,8 @@
                 android:id="@+id/joint_game_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/customborder1"
                 android:layout_margin="15dp"
-                android:padding="3dp"
-                tools:background="@color/neon_orange">
+                android:padding="3dp">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -207,10 +208,8 @@
                 android:id="@+id/training_mode_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/customborder1"
                 android:layout_margin="15dp"
-                android:padding="3dp"
-                tools:background="@color/neon_orange">
+                android:padding="3dp">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -229,10 +228,8 @@
                 android:id="@+id/cookie_mode_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/customborder1"
                 android:layout_margin="15dp"
-                android:padding="3dp"
-                tools:background="@color/neon_orange">
+                android:padding="3dp">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -251,10 +248,8 @@
                 android:id="@+id/advancements_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/customborder1"
                 android:layout_margin="15dp"
-                android:padding="3dp"
-                tools:background="@color/neon_orange">
+                android:padding="3dp">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -273,10 +268,8 @@
                 android:id="@+id/settings_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/customborder1"
                 android:layout_margin="15dp"
-                android:padding="3dp"
-                tools:background="@color/neon_orange">
+                android:padding="3dp">
 
                 <ImageView
                     android:layout_width="50dp"
@@ -291,7 +284,6 @@
                     android:text="@string/settings" />
 
             </RelativeLayout>
-
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
