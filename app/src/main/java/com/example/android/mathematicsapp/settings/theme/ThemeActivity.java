@@ -3,6 +3,7 @@ package com.example.android.mathematicsapp.settings.theme;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -129,6 +130,10 @@ public class ThemeActivity extends AppCompatActivity {
         SharedPreferences prefs = getApplicationContext().getSharedPreferences("SharedPrefKey", Context.MODE_PRIVATE);
         _currentBg = prefs.getInt("currentBgKey", _lightBg);
         _currentNonBg = prefs.getInt("currentNonBgKey", _neonBlue);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setNavigationBarColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
+        }
     }
 
     private void setCheckedAlready() {

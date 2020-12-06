@@ -7,7 +7,7 @@
     <string name="total">total</string>
     <string name="diagram">diagram</string>
     <string name="day_streak">%s day(s) streak</string>
-    <string name="x_of_200">%s / 200</string>
+    <string name="daily_goal">%s</string>
     <string name="cash">%s</string>
     <string name="current_date">%s</string>
 

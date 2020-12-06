@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -65,6 +66,10 @@ public class HomeScreenActivity extends AppCompatActivity {
         _homeScreenActionBar.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
         _homeScreenBackground.setBackgroundColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setNavigationBarColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
+        }
+
         // non buttons
         _cashLayout = (LinearLayout) findViewById(R.id.cash_layout);
         _cashLayout.setBackgroundResource(R.drawable.customborder1);
@@ -118,7 +123,13 @@ public class HomeScreenActivity extends AppCompatActivity {
         drawableSettings.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
     }
 
+    /** most of the scores are set here */
     private void changeText() {
+        // TODO save scores here for home screen activity appearance.
+        SharedPreferences prefs = getApplicationContext().getSharedPreferences("SharedPrefKey", Context.MODE_PRIVATE);
+//        _homeScreenActionBar.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+//        _homeScreenBackground.setBackgroundColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
+
         _exp = getApplicationContext().getString(R.string.exp);
         TextView exp = (TextView) findViewById(R.id.exp);
         exp.setText(String.format(_exp, "1000"));
@@ -127,14 +138,15 @@ public class HomeScreenActivity extends AppCompatActivity {
         TextView dayStreak = (TextView) findViewById(R.id.day_streak);
         dayStreak.setText(String.format(_dayStreak, "14"));
 
-        _somethingOfGoalAchieved = getApplicationContext().getString(R.string.x_of_200);
+        _somethingOfGoalAchieved = getApplicationContext().getString(R.string.daily_goal);
         TextView somethingOfGoalAchieved = (TextView) findViewById(R.id.something_of_goal_achieved);
-        somethingOfGoalAchieved.setText(String.format(_somethingOfGoalAchieved, "513"));
+        somethingOfGoalAchieved.setText(String.format(_somethingOfGoalAchieved, "513" + " / " + "200"));
 
         _cash = getApplicationContext().getString(R.string.cash);
         TextView cash = (TextView) findViewById(R.id.cash_num);
         cash.setText(String.format(_cash, "5513"));
 
+        // get and set the date for the text view, to display current date.
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
         String strDate= formatter.format(date);

@@ -4,12 +4,14 @@ import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.vectordrawable.graphics.drawable.ArgbEvaluator;
 
@@ -26,11 +28,12 @@ public class IntroActivity extends AppCompatActivity implements Runnable {
     private Thread _thread;
     private boolean _isRunning;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
-        new HomeScreenActivity();
+        getWindow().setNavigationBarColor(getApplicationContext().getResources().getColor(R.color.intro_background));
         findViewById(R.id.intro).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

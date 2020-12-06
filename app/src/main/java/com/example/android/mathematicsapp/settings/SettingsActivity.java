@@ -3,11 +3,13 @@ package com.example.android.mathematicsapp.settings;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
@@ -36,6 +38,10 @@ public class SettingsActivity extends AppCompatActivity {
         _settingsScreenBackground = (LinearLayout) findViewById(R.id.setting_background);
         _settingsScreenActionBar.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
         _settingsScreenBackground.setBackgroundColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setNavigationBarColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
+        }
 
         _themeBtn = (LinearLayout) findViewById(R.id.theme_btn);
         _numpadBtn = (LinearLayout) findViewById(R.id.numpad_btn);
