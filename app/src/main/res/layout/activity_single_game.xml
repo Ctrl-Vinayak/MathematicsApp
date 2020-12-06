@@ -47,6 +47,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="15dp"
                 android:textSize="30sp"
                 android:text="1" />
 
@@ -66,17 +68,20 @@
             android:weightSum="4"
             android:orientation="vertical">
 
-            <RelativeLayout
-                android:id="@+id/bitter_end_btn"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="15dp"
-                android:padding="3dp">
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:baselineAligned="false">
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:id="@+id/bitter_end_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
 
                     <ImageView
                         android:id="@+id/stopwatch_image_bitter_end"
@@ -90,134 +95,175 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:layout_toRightOf="@+id/stopwatch_image_bitter_end"
-                        android:layout_marginLeft="20dp"
-                        android:textSize="30sp"
-                        android:text="@string/bitter_end" />
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"
+                        android:text="@string/bitter_end"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@+id/stopwatch_image_bitter_end" />
 
                 </RelativeLayout>
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_graph" />
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/minute_challenge_btn"
+                    <ImageView
+                        android:id="@+id/graph_bitter_end_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_graph"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="15dp"
-                android:padding="3dp">
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:baselineAligned="false">
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:id="@+id/minute_challenge_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
 
                     <ImageView
                         android:id="@+id/stopwatch_image_minute_challenge"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/ic_stopwatch_bitter_end" />
+                        android:src="@drawable/ic_stopwatch_minute_challenge" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:layout_toRightOf="@+id/stopwatch_image_minute_challenge"
-                        android:layout_marginLeft="20dp"
-                        android:textSize="30sp"
-                        android:text="@string/minute_challenge" />
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"
+                        android:text="@string/minute_challenge"
+                        android:layout_toEndOf="@+id/stopwatch_image_minute_challenge"
+                        android:layout_marginStart="10dp" />
 
                 </RelativeLayout>
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_graph" />
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/bitter_end_btn"
+                    <ImageView
+                        android:id="@+id/graph_minute_challenge_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_graph"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="15dp"
-                android:padding="3dp">
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:baselineAligned="false">
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:id="@+id/speed_challenge_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
 
                     <ImageView
-                        android:id="@+id/stopwatch_image_bitter_end"
+                        android:id="@+id/stopwatch_image_speed_challenge"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/ic_stopwatch_bitter_end" />
+                        android:src="@drawable/ic_stopwatch_speed_challenge" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:layout_toRightOf="@+id/stopwatch_image_bitter_end"
-                        android:layout_marginLeft="20dp"
-                        android:textSize="30sp"
-                        android:text="@string/bitter_end" />
+                        android:layout_toRightOf="@+id/stopwatch_image_speed_challenge"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"
+                        android:text="@string/speed_challenge"
+                        android:layout_toEndOf="@+id/stopwatch_image_speed_challenge"
+                        android:layout_marginStart="10dp" />
 
                 </RelativeLayout>
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_graph" />
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/bitter_end_btn"
+                    <ImageView
+                        android:id="@+id/graph_speed_challenge_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_graph"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:layout_margin="15dp"
-                android:padding="3dp">
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:baselineAligned="false">
 
                 <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:id="@+id/no_time_limit_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
 
                     <ImageView
-                        android:id="@+id/stopwatch_image_bitter_end"
+                        android:id="@+id/stopwatch_image_no_time_limit"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_centerVertical="true"
-                        android:src="@drawable/ic_stopwatch_bitter_end" />
+                        android:src="@drawable/ic_stopwatch_no_time_limit" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:layout_toRightOf="@+id/stopwatch_image_bitter_end"
-                        android:layout_marginLeft="20dp"
-                        android:textSize="30sp"
-                        android:text="@string/bitter_end" />
+                        android:layout_toRightOf="@+id/stopwatch_image_no_time_limit"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="20sp"
+                        android:text="@string/no_time_limit"
+                        android:layout_toEndOf="@+id/stopwatch_image_no_time_limit"
+                        android:layout_marginStart="10dp" />
 
                 </RelativeLayout>
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_graph" />
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/graph_no_time_limit_btn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_graph"/>
+
+                </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
