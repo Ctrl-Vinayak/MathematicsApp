@@ -172,6 +172,14 @@ public class HomeScreenActivity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.joint_game_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeScreenActivity.this, JointGameActivity.class);
+                startActivity(intent);
+            }
+        });
+
         findViewById(R.id.settings_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
