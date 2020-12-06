@@ -18,6 +18,7 @@
             android:src="@drawable/ic_back" />
 
         <TextView
+            android:id="@+id/single_game_action_bar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -37,13 +38,16 @@
             android:layout_weight="1">
 
             <ImageView
+                android:id="@+id/arrow_up_btn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/ic_arrow_up"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="25dp" />
+                android:layout_marginTop="25dp"
+                android:padding="3dp"/>
 
             <TextView
+                android:id="@+id/level_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -53,12 +57,14 @@
                 android:text="1" />
 
             <ImageView
+                android:id="@+id/arrow_down_btn"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/ic_arrow_down"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="25dp" />
+                android:layout_marginBottom="25dp"
+                android:padding="3dp"/>
 
         </RelativeLayout>
         <LinearLayout

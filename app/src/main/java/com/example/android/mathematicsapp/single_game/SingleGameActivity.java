@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,8 +19,16 @@ import com.example.android.mathematicsapp.homescreen.HomeScreenActivity;
 
 public class SingleGameActivity extends AppCompatActivity {
 
+    private String _title;
+
+    private TextView _singleGameActionBarTitle;
+
     private RelativeLayout _singleGameActionBar;
     private LinearLayout _singleGameBackground;
+
+    private ImageView _arrowUpBtn;
+    private TextView _levelTxt;
+    private ImageView _arrowDownBtn;
 
     private RelativeLayout _bitterEndBtn;
     private RelativeLayout _minuteChallengeBtn;
@@ -46,6 +55,22 @@ public class SingleGameActivity extends AppCompatActivity {
         _singleGameBackground = (LinearLayout) findViewById(R.id.single_game_background);
         _singleGameActionBar.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
         _singleGameBackground.setBackgroundColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
+
+        // levels
+        _arrowUpBtn = (ImageView) findViewById(R.id.arrow_up_btn);
+        _arrowUpBtn.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableArrowUpBtn = (GradientDrawable) _arrowUpBtn.getBackground();
+        drawableArrowUpBtn.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _levelTxt = (TextView) findViewById(R.id.level_txt);
+        _levelTxt.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableLevelTxt = (GradientDrawable) _levelTxt.getBackground();
+        drawableLevelTxt.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _arrowDownBtn = (ImageView) findViewById(R.id.arrow_down_btn);
+        _arrowDownBtn.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableArrowDownBtn = (GradientDrawable) _arrowDownBtn.getBackground();
+        drawableArrowDownBtn.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
 
         // buttons
         _bitterEndBtn = (RelativeLayout) findViewById(R.id.bitter_end_btn);
@@ -91,7 +116,11 @@ public class SingleGameActivity extends AppCompatActivity {
     }
 
     private void changeText() {
+        _title = getApplicationContext().getString(R.string.level_nums);
+        _singleGameActionBarTitle = (TextView) findViewById(R.id.single_game_action_bar_title);
+        _singleGameActionBarTitle.setText(String.format(_title, 1));
 
+        _levelTxt.setText("1");
     }
 
     private void buttonIntents() {
