@@ -48,7 +48,7 @@ public class MainScore {
         return _dailyStreak;
     }
 
-    public int getDailyGaol() {
+    public int getDailyGoal() {
         return _dailygoal;
     }
 

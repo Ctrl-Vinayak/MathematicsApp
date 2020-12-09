@@ -33,6 +33,7 @@
     <!-- Mathematics Settings String Res -->
     <string name="theme">THEME</string>
     <string name="numpad">NUMPAD</string>
+    <string name="numpad_lwc">Numpad</string>
     <string name="reset_style">Reset Style</string>
 
     <!-- Snake String Res -->
