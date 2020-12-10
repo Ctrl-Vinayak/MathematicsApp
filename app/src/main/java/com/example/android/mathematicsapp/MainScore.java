@@ -9,6 +9,7 @@ public class MainScore {
     private int _cash;
     private int _level;
     private boolean _isDailyTaskDone;
+    private boolean _isAboveNumpadChosen;
 
     /** setters */
     public void setExpTotal(int expTotal) {
@@ -39,6 +40,10 @@ public class MainScore {
         _isDailyTaskDone = isDailyTaskDone;
     }
 
+    public void setAboveNumpadChosen(boolean isAboveNumpadChosen) {
+        _isAboveNumpadChosen = isAboveNumpadChosen;
+    }
+
     /** getters */
     public int getExpTotal() {
         return _expTotal;
@@ -66,5 +71,9 @@ public class MainScore {
 
     public boolean isDailyTaskDone() {
         return _isDailyTaskDone;
+    }
+
+    public boolean isAboveNumpadChosen() {
+        return _isAboveNumpadChosen;
     }
 }

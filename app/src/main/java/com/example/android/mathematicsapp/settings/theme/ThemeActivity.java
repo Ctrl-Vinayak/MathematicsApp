@@ -323,5 +323,9 @@ public class ThemeActivity extends AppCompatActivity {
         _themeBg.setBackgroundColor(_currentBg);
         _actionBarBg.setBackgroundColor(_currentNonBg);
         _resetStyle.setBackgroundColor(_currentNonBg);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setNavigationBarColor(_currentBg);
+        }
     }
 }

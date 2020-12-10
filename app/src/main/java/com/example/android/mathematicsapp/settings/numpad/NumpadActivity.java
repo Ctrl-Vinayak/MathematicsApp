@@ -12,12 +12,15 @@ import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.android.mathematicsapp.MainScore;
 import com.example.android.mathematicsapp.R;
 import com.example.android.mathematicsapp.homescreen.HomeScreenActivity;
 import com.example.android.mathematicsapp.settings.SettingsActivity;
 import com.example.android.mathematicsapp.single_game.SingleGameActivity;
 
 public class NumpadActivity extends AppCompatActivity {
+
+    private MainScore mainScore;
 
     private RelativeLayout _numpadActionBar;
     private LinearLayout _numpadBackground;
@@ -41,6 +44,7 @@ public class NumpadActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numpad);
+        mainScore = new MainScore();
         applyTheme();
         buttonIntents();
     }
@@ -121,6 +125,65 @@ public class NumpadActivity extends AppCompatActivity {
         drawableNumpadAboveOption.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
 
         //numpad below (aka numpad two)
+        _numpad_below_num_one = (RelativeLayout) _numpadTwo.findViewById(R.id.numpad_below_num_one);
+        _numpad_below_num_one.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableNumpadBelowNumOne = (GradientDrawable) _numpad_below_num_one.getBackground();
+        drawableNumpadBelowNumOne.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _numpad_below_num_two = (RelativeLayout) _numpadTwo.findViewById(R.id.numpad_below_num_two);
+        _numpad_below_num_two.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableNumpadBelowNumTwo = (GradientDrawable) _numpad_below_num_two.getBackground();
+        drawableNumpadBelowNumTwo.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _numpad_below_num_three = (RelativeLayout) _numpadTwo.findViewById(R.id.numpad_below_num_three);
+        _numpad_below_num_three.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableNumpadBelowNumThree = (GradientDrawable) _numpad_below_num_three.getBackground();
+        drawableNumpadBelowNumThree.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _numpad_below_num_four = (RelativeLayout) _numpadTwo.findViewById(R.id.numpad_below_num_four);
+        _numpad_below_num_four.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableNumpadBelowNumFour = (GradientDrawable) _numpad_below_num_four.getBackground();
+        drawableNumpadBelowNumFour.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _numpad_below_num_five = (RelativeLayout) _numpadTwo.findViewById(R.id.numpad_below_num_five);
+        _numpad_below_num_five.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableNumpadBelowNumFive = (GradientDrawable) _numpad_below_num_five.getBackground();
+        drawableNumpadBelowNumFive.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _numpad_below_num_six = (RelativeLayout) _numpadTwo.findViewById(R.id.numpad_below_num_six);
+        _numpad_below_num_six.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableNumpadBelowNumSix = (GradientDrawable) _numpad_below_num_six.getBackground();
+        drawableNumpadBelowNumSix.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _numpad_below_num_seven = (RelativeLayout) _numpadTwo.findViewById(R.id.numpad_below_num_seven);
+        _numpad_below_num_seven.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableNumpadBelowNumSeven = (GradientDrawable) _numpad_below_num_seven.getBackground();
+        drawableNumpadBelowNumSeven.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _numpad_below_num_eight = (RelativeLayout) _numpadTwo.findViewById(R.id.numpad_below_num_eight);
+        _numpad_below_num_eight.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableNumpadBelowNumEight = (GradientDrawable) _numpad_below_num_eight.getBackground();
+        drawableNumpadBelowNumEight.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _numpad_below_num_nine = (RelativeLayout) _numpadTwo.findViewById(R.id.numpad_below_num_nine);
+        _numpad_below_num_nine.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableNumpadBelowNumNine = (GradientDrawable) _numpad_below_num_nine.getBackground();
+        drawableNumpadBelowNumNine.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _numpad_below_num_zero = (RelativeLayout) _numpadTwo.findViewById(R.id.numpad_below_num_zero);
+        _numpad_below_num_zero.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableNumpadBelowNumZero = (GradientDrawable) _numpad_below_num_zero.getBackground();
+        drawableNumpadBelowNumZero.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _numpad_below_backspace = (RelativeLayout) _numpadTwo.findViewById(R.id.numpad_below_backspace);
+        _numpad_below_backspace.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableNumpadBelowBackspace = (GradientDrawable) _numpad_below_backspace.getBackground();
+        drawableNumpadBelowBackspace.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
+
+        _numpad_below_option = (RelativeLayout) _numpadTwo.findViewById(R.id.numpad_below_option);
+        _numpad_below_option.setBackgroundResource(R.drawable.customborder1);
+        GradientDrawable drawableNumpadBelowOption = (GradientDrawable) _numpad_below_option.getBackground();
+        drawableNumpadBelowOption.setColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
     }
 
     private void buttonIntents() {
@@ -128,6 +191,24 @@ public class NumpadActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(NumpadActivity.this, SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        _numpadOne.findViewById(R.id.numpad_above_option).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainScore.setAboveNumpadChosen(true);
+                Intent intent = new Intent(NumpadActivity.this, HomeScreenActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        _numpadTwo.findViewById(R.id.numpad_below_option).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainScore.setAboveNumpadChosen(false);
+                Intent intent = new Intent(NumpadActivity.this, HomeScreenActivity.class);
                 startActivity(intent);
             }
         });
