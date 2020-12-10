@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
 import com.example.android.mathematicsapp.homescreen.HomeScreenActivity;
+import com.example.android.mathematicsapp.settings.numpad.NumpadActivity;
 import com.example.android.mathematicsapp.settings.theme.ThemeActivity;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -62,6 +63,14 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SettingsActivity.this, ThemeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.numpad_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SettingsActivity.this, NumpadActivity.class);
                 startActivity(intent);
             }
         });
