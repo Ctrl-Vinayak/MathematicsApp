@@ -62,8 +62,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="5"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                         <include layout="@layout/numpad_one" android:id="@+id/numpad_one"/>
 

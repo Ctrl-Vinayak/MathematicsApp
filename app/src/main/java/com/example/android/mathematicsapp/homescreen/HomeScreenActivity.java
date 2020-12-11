@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.android.mathematicsapp.MainScore;
 import com.example.android.mathematicsapp.R;
 import com.example.android.mathematicsapp.joint_game.JointGameActivity;
 import com.example.android.mathematicsapp.settings.SettingsActivity;
@@ -23,6 +24,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class HomeScreenActivity extends AppCompatActivity {
+
+    private MainScore mainScore;
 
     private String _exp;
     private String _dayStreak;
@@ -49,6 +52,9 @@ public class HomeScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
+        mainScore = new MainScore();
+
         applyTheme();
         changeText();
         buttonIntents();
@@ -185,6 +191,13 @@ public class HomeScreenActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(HomeScreenActivity.this, SettingsActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.update_new_daily_goal).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainScore.setDailyGoal(500);
             }
         });
     }

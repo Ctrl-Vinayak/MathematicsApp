@@ -44,6 +44,7 @@ public class SettingsActivity extends AppCompatActivity {
             getWindow().setNavigationBarColor(prefs.getInt("currentBgKey", getApplicationContext().getResources().getColor(R.color.light_bg)));
         }
 
+        // TODO improve the background of these 2 buttons.
         _themeBtn = (LinearLayout) findViewById(R.id.theme_btn);
         _numpadBtn = (LinearLayout) findViewById(R.id.numpad_btn);
         _themeBtn.setBackgroundColor(prefs.getInt("currentNonBgKey", getApplicationContext().getResources().getColor(R.color.neon_blue)));
