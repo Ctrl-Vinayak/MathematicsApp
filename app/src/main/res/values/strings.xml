@@ -21,7 +21,7 @@
 
     <!-- Mathematics Single Game String Res -->
     <string name="level_nums">Level 1 - %s</string>
-    <string name="bitter_end">To the better end</string>
+    <string name="bitter_end">To the bitter end</string>
     <string name="minute_challenge">Minute challenge</string>
     <string name="speed_challenge">Speed challenge</string>
     <string name="no_time_limit">No Time Limit</string>
