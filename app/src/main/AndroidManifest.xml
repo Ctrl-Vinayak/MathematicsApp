@@ -19,22 +19,46 @@
         <activity android:name=".homescreen.HomeScreenActivity"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".single_game.SingleGameActivity"
-            android:screenOrientation="sensorPortrait">
-        </activity>
-        <activity android:name=".joint_game.JointGameActivity"
-            android:screenOrientation="sensorPortrait">
-        </activity>
-        <activity android:name=".settings.SettingsActivity"
-            android:screenOrientation="sensorPortrait">
-        </activity>
-        <activity android:name=".settings.theme.ThemeActivity"
-            android:screenOrientation="sensorPortrait">
-        </activity>
-        <activity android:name=".settings.numpad.NumpadActivity"
-            android:screenOrientation="sensorPortrait">
-        </activity>
         <activity android:name=".snakegame.SnakeActivity"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.begin.TrainingModeBeginScreen"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.ExerciseNum.ExerciseOne"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseOne"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.ExerciseNum.ExerciseTwo"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseTwo"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.ExerciseNum.ExerciseThree"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseThree"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.ExerciseNum.ExerciseFour"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseFour"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.ExerciseNum.ExerciseFive"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseFive"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.ExerciseNum.ExerciseSix"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseSix"
             android:screenOrientation="sensorPortrait">
         </activity>
     </application>

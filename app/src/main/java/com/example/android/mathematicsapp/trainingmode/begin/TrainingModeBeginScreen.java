@@ -1,0 +1,75 @@
+package com.example.android.mathematicsapp.trainingmode.begin;
+
+import android.content.Intent;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.android.mathematicsapp.R;
+import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseFive;
+import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseFour;
+import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseOne;
+import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseSix;
+import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseThree;
+import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseTwo;
+
+public class TrainingModeBeginScreen extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_training_mode_begin_screen);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setNavigationBarColor(getApplicationContext().getResources().getColor(R.color.dark_bg));
+        }
+
+        buttonIntents();
+    }
+
+    private void buttonIntents() {
+        findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseOne.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseTwo.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseThree.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseFour.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.button5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseFive.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.button6).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseSix.class);
+                startActivity(intent);
+            }
+        });
+    }
+}

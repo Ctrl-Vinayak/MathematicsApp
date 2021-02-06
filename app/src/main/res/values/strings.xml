@@ -12,30 +12,33 @@
     <string name="current_date">%s</string>
 
     <!-- Mathematics Home Screen Button String Res -->
-    <string name="single_game">Single Game</string>
-    <string name="joint_game">Joint Game</string>
     <string name="training_mode">Training Mode</string>
-    <string name="cookie_mode">Cookie Mode</string>
     <string name="advancements">Advancements</string>
-    <string name="settings">Settings</string>
 
-    <!-- Mathematics Single Game String Res -->
-    <string name="level_nums">Level 1 - %s</string>
-    <string name="bitter_end">To the bitter end</string>
-    <string name="minute_challenge">Minute challenge</string>
-    <string name="speed_challenge">Speed challenge</string>
-    <string name="no_time_limit">No time limit</string>
+    <!-- Snake String Res -->
+    <string name="app_name">MathematicsApp</string>
+    <string name="current_score">Score: %s</string>
+    <string name="last_score">Last score: %s</string>
+    <string name="high_score">High score: %s</string>
+    <string name="start_game_prompt">Touch the screen to start the game</string>
+    <string name="congratulations">Congratulations, you finished the game</string>
 
-    <!-- Mathematics Joint Game String Res -->
-    <string name="questions">Questions</string>
-    <string name="time_limit">Time Limit</string>
+    <!-- Training Mode (10 subjects) -->
+    <!-- 1 --> <string name="assigning_numbers_their_places">Assigning numbers their place</string>
+    <!-- 2 --> <string name="reading_and_writing_absolute_value">Reading and writing absolute value</string>
+    <!-- 3 --> <string name="added_signed_numbers">Added signed numbers</string>
+    <!-- 4 --> <string name="making_a_difference_with_signed_numbers">Making a difference with signed numbers</string>
+    <!-- 5 --> <string name="multiplying_signed_numbers">Multiplying signed numbers</string>
+    <!-- 6 --> <string name="dividing_signed_numbers">Dividing signed numbers</string>
+    <!-- 7 --> <string name="grouping_symbols">Grouping symbols</string>
+    <!-- 8 --> <string name="distributive_property">Distributive property</string>
+    <!-- 9 --> <string name="associative_rule">Associative rule</string>
+    <!-- 10 --> <string name="commutative_rule">Commutative rule</string>
 
-    <!-- Mathematics Settings String Res -->
-    <string name="theme">THEME</string>
-    <string name="numpad">NUMPAD</string>
-    <string name="numpad_lwc">Numpad</string>
-    <string name="reset_style">Reset Style</string>
-    <string name="zero">0</string>
+    <!-- Assigning numbers their place -->
+    <string name="which_is_larger">Which is larger, </string>
+
+    <!-- Number Pad Res -->
     <string name="one">1</string>
     <string name="two">2</string>
     <string name="three">3</string>
@@ -45,12 +48,8 @@
     <string name="seven">7</string>
     <string name="eight">8</string>
     <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="minus">-</string>
 
-    <!-- Snake String Res -->
-    <string name="app_name">MathematicsApp</string>
-    <string name="current_score">Score: %s</string>
-    <string name="last_score">Last score: %s</string>
-    <string name="high_score">High score: %s</string>
-    <string name="start_game_prompt">Touch the screen to start the game</string>
-    <string name="congratulations">Congratulations, you finished the game</string>
+
 </resources>

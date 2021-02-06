@@ -37,51 +37,6 @@
                 android:textSize="16sp" />
 
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/update_new_daily_goal"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_circle_arrow"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/layout_of_daily_exp_and_daily_streak" />
-
-        <LinearLayout
-            android:id="@+id/layout_of_daily_exp_and_daily_streak"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/exp_daily_diagram"
-            android:orientation="vertical"
-            android:layout_toStartOf="@id/exp_daily_diagram">
-
-            <TextView
-                android:id="@+id/day_streak"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/day_streak"
-                android:textSize="18sp"
-                tools:text="56 day(s) streak" />
-
-            <TextView
-                android:id="@+id/something_of_goal_achieved"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/daily_goal"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-        <ImageView
-            android:id="@+id/exp_daily_diagram"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:contentDescription="@string/diagram"
-            android:src="@drawable/ic_diagram" />
     </RelativeLayout>
     <LinearLayout
         android:id="@+id/home_screen_background"
@@ -94,52 +49,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
 
-            <LinearLayout
-                android:id="@+id/cash_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp"
-                android:paddingRight="10dp"
-                android:paddingEnd="10dp">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/ic_cashbag" />
-
-                <TextView
-                    android:id="@+id/cash_num"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:textSize="16sp"
-                    android:text="@string/cash"
-                    tools:text="576" />
-
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/lock_image"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                android:layout_toRightOf="@+id/cash_layout"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/ic_lock"
-                android:layout_toEndOf="@+id/cash_layout"
-                android:layout_marginStart="10dp" />
-
             <ImageView
                 android:id="@+id/snake_image"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_vertical"
-                android:layout_toRightOf="@+id/lock_image"
                 android:layout_marginLeft="10dp"
                 android:src="@drawable/ic_snake"
-                android:layout_toEndOf="@+id/lock_image"
                 android:layout_marginStart="10dp" />
 
             <RelativeLayout
@@ -163,52 +79,13 @@
 
             </RelativeLayout>
         </RelativeLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginTop="30dp">
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
 
-            <RelativeLayout
-                android:id="@+id/single_game_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:padding="3dp">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_single" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:textSize="30sp"
-                    android:text="@string/single_game" />
-
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/joint_game_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:padding="3dp">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_double" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:textSize="30sp"
-                    android:text="@string/joint_game" />
-
-            </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/training_mode_btn"
                 android:layout_width="match_parent"
@@ -225,30 +102,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:textSize="30sp"
-                    android:text="@string/training_mode" />
+                    android:text="@string/training_mode"
+                    android:textSize="30sp" />
 
             </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/cookie_mode_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:padding="3dp">
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_cookie" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:textSize="30sp"
-                    android:text="@string/cookie_mode" />
-
-            </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/advancements_btn"
                 android:layout_width="match_parent"
@@ -265,28 +123,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:textSize="30sp"
-                    android:text="@string/advancements" />
-
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/settings_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:padding="3dp">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_gear" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:textSize="30sp"
-                    android:text="@string/settings" />
+                    android:text="@string/advancements"
+                    android:textSize="30sp" />
 
             </RelativeLayout>
         </LinearLayout>
