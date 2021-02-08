@@ -34,6 +34,9 @@
         <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseOne"
             android:screenOrientation="sensorPortrait">
         </activity>
+        <activity android:name=".trainingmode.exerciseTheory.TheoryTwo"
+            android:screenOrientation="sensorPortrait">
+        </activity>
         <activity android:name=".trainingmode.exerciseNum.ExerciseTwo"
             android:screenOrientation="sensorPortrait">
         </activity>

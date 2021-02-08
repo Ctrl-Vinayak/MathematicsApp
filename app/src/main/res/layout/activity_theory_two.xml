@@ -11,7 +11,7 @@
         android:background="@color/neon_orange">
 
         <ImageView
-            android:id="@+id/exercise_one_back_button"
+            android:id="@+id/theory_back_button"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerVertical="true"
@@ -21,37 +21,79 @@
 
         <TextView
             android:id="@+id/action_bar_title_exercise_theory"
-            android:layout_toRightOf="@id/exercise_one_back_button"
+            android:layout_toRightOf="@id/theory_back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_centerVertical="true"/>
 
     </RelativeLayout>
-    <LinearLayout
-        android:id="@+id/exercise_one_contents"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="@color/dark_bg">
 
         <LinearLayout
-            android:id="@+id/exercise_one_question_area"
+            android:id="@+id/exercise_one_contents"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginHorizontal="20dp"
-            android:paddingVertical="10dp"
-            android:orientation="vertical"
-            android:background="@color/neon_orange">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/theory"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/theory_layout"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:textSize="14sp"/>
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:orientation="vertical"
+                android:background="@color/neon_orange">
 
+                <TextView
+                    android:id="@+id/theory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/example_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:orientation="vertical"
+                android:background="@color/neon_orange">
+
+                <TextView
+                    android:id="@+id/example"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ok_button"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:paddingVertical="10dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:background="@color/neon_orange">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="OK"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+    </ScrollView>
 </LinearLayout>
