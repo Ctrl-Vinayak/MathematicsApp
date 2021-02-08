@@ -21,9 +21,15 @@ public class HomeScreenActivity extends AppCompatActivity {
     // TODO Add the remaining 7 to 10 exercises!
     // TODO Make advancements activity.
     // TODO Save exp after you did an exercise (+1 exp).
+    // TODO Save score for challenge mode (+2 exp).
+    // TODO Save cookies for cookie mode (+1 cookie).
+
+    // TODO list Advancements
     // TODO When snake image clicked, you got the new achievement, "snake gamer (:".
-    // TODO When exp reached 10, you got the achievement, "You reached 10 exp"
     // TODO When exp reached 100, you got the achievement, "You reached 100 exp"
+    // TODO When score reached 20 on challenge mode, "Challenger mode: 20 difficult question done!"
+    // TODO When score reached 100 on challenge mode, "Challenger mode: 100 difficult question done!"
+    // TODO When you have 100 cookies, "Cookie monster"
 
     private String _exp;
     private String _date;
