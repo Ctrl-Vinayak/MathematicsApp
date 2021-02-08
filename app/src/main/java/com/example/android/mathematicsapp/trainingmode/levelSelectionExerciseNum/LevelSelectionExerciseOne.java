@@ -1,4 +1,4 @@
-package com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum;
+package com.example.android.mathematicsapp.trainingmode.levelSelectionExerciseNum;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,12 +14,10 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
-import com.example.android.mathematicsapp.trainingmode.ExerciseNum.ExerciseThree;
+import com.example.android.mathematicsapp.trainingmode.exerciseNum.ExerciseOne;
 import com.example.android.mathematicsapp.trainingmode.begin.TrainingModeBeginScreen;
 
-public class LevelSelectionExerciseThree extends AppCompatActivity {
-
-    // TODO DON'T FORGET TO CHANGE SETCONTENTVIEW AT THE BEGINNING OF ONCREATE METHOD!!! CHANGE LAYOUT!!!
+public class LevelSelectionExerciseOne extends AppCompatActivity {
 
     private LinearLayout _linearLayout;
     private LinearLayout _rowOfLevels[] = new LinearLayout[34];
@@ -30,7 +28,7 @@ public class LevelSelectionExerciseThree extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_selection_exercise_three);
+        setContentView(R.layout.activity_level_selection_exercise_one);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setNavigationBarColor(getApplicationContext().getResources().getColor(R.color.dark_bg));
         }
@@ -77,9 +75,9 @@ public class LevelSelectionExerciseThree extends AppCompatActivity {
             _buttonLevel[(i * 3) + 1].setTextSize(25);
             _buttonLevel[(i * 3) + 2].setTextSize(25);
 
-            _buttonLevel[(i * 3)].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.locked_button));
-            _buttonLevel[(i * 3) + 1].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.neon_orange));
-            _buttonLevel[(i * 3) + 2].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.locked_button));
+                _buttonLevel[(i * 3)].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.locked_button));
+                _buttonLevel[(i * 3) + 1].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.neon_orange));
+                _buttonLevel[(i * 3) + 2].setBackgroundColor(getApplicationContext().getResources().getColor(R.color.locked_button));
 
             _rowOfLevels[i].addView(_buttonLevel[(i * 3)]);
             _rowOfLevels[i].addView(_buttonLevel[(i * 3) + 1]);
@@ -89,7 +87,7 @@ public class LevelSelectionExerciseThree extends AppCompatActivity {
             _buttonLevel[(i * 3)].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(LevelSelectionExerciseThree.this, ExerciseThree.class);
+                    Intent intent = new Intent(LevelSelectionExerciseOne.this, ExerciseOne.class);
                     intent.putExtra("levelnum", (finalI * 3) + 1);
                     startActivity(intent);
                 }
@@ -97,7 +95,7 @@ public class LevelSelectionExerciseThree extends AppCompatActivity {
             _buttonLevel[(i * 3) + 1].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(LevelSelectionExerciseThree.this, ExerciseThree.class);
+                    Intent intent = new Intent(LevelSelectionExerciseOne.this, ExerciseOne.class);
                     intent.putExtra("levelnum", (finalI * 3) + 2);
                     startActivity(intent);
                 }
@@ -105,7 +103,7 @@ public class LevelSelectionExerciseThree extends AppCompatActivity {
             _buttonLevel[(i * 3) + 2].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(LevelSelectionExerciseThree.this, ExerciseThree.class);
+                    Intent intent = new Intent(LevelSelectionExerciseOne.this, ExerciseOne.class);
                     intent.putExtra("levelnum", (finalI * 3) + 3);
                     startActivity(intent);
                 }
@@ -126,7 +124,7 @@ public class LevelSelectionExerciseThree extends AppCompatActivity {
         _buttonLevel[99].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LevelSelectionExerciseThree.this, ExerciseThree.class);
+                Intent intent = new Intent(LevelSelectionExerciseOne.this, ExerciseOne.class);
                 intent.putExtra("levelnum", 100);
                 startActivity(intent);
             }
@@ -137,7 +135,7 @@ public class LevelSelectionExerciseThree extends AppCompatActivity {
         _backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LevelSelectionExerciseThree.this, TrainingModeBeginScreen.class);
+                Intent intent = new Intent(LevelSelectionExerciseOne.this, TrainingModeBeginScreen.class);
                 startActivity(intent);
             }
         });

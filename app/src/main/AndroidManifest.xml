@@ -25,40 +25,43 @@
         <activity android:name=".trainingmode.begin.TrainingModeBeginScreen"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".trainingmode.ExerciseNum.ExerciseOne"
+        <activity android:name=".trainingmode.exerciseTheory.TheoryOne"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseOne"
+        <activity android:name=".trainingmode.exerciseNum.ExerciseOne"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".trainingmode.ExerciseNum.ExerciseTwo"
+        <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseOne"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseTwo"
+        <activity android:name=".trainingmode.exerciseNum.ExerciseTwo"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".trainingmode.ExerciseNum.ExerciseThree"
+        <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseTwo"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseThree"
+        <activity android:name=".trainingmode.exerciseNum.ExerciseThree"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".trainingmode.ExerciseNum.ExerciseFour"
+        <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseThree"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseFour"
+        <activity android:name=".trainingmode.exerciseNum.ExerciseFour"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".trainingmode.ExerciseNum.ExerciseFive"
+        <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseFour"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseFive"
+        <activity android:name=".trainingmode.exerciseNum.ExerciseFive"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".trainingmode.ExerciseNum.ExerciseSix"
+        <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseFive"
             android:screenOrientation="sensorPortrait">
         </activity>
-        <activity android:name=".trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseSix"
+        <activity android:name=".trainingmode.exerciseNum.ExerciseSix"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseSix"
             android:screenOrientation="sensorPortrait">
         </activity>
     </application>

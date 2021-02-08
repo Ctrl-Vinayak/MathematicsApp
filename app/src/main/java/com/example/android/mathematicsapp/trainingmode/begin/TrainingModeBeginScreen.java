@@ -9,12 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
 import com.example.android.mathematicsapp.homescreen.HomeScreenActivity;
-import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseFive;
-import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseFour;
-import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseOne;
-import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseSix;
-import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseThree;
-import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseTwo;
+import com.example.android.mathematicsapp.trainingmode.exerciseTheory.TheoryOne;
+import com.example.android.mathematicsapp.trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseOne;
 
 public class TrainingModeBeginScreen extends AppCompatActivity {
 
@@ -37,47 +33,50 @@ public class TrainingModeBeginScreen extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        /** TODO new intents... from training mode begin screen it will go to exercise theory screen */
+
         findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseOne.class);
+                Intent intent = new Intent(TrainingModeBeginScreen.this, TheoryOne.class);
                 startActivity(intent);
             }
         });
-        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseTwo.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseThree.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseFour.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.button5).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseFive.class);
-                startActivity(intent);
-            }
-        });
-        findViewById(R.id.button6).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseSix.class);
-                startActivity(intent);
-            }
-        });
+//        findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseTwo.class);
+//                startActivity(intent);
+//            }
+//        });
+//        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseThree.class);
+//                startActivity(intent);
+//            }
+//        });
+//        findViewById(R.id.button4).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseFour.class);
+//                startActivity(intent);
+//            }
+//        });
+//        findViewById(R.id.button5).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseFive.class);
+//                startActivity(intent);
+//            }
+//        });
+//        findViewById(R.id.button6).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(TrainingModeBeginScreen.this, LevelSelectionExerciseSix.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }

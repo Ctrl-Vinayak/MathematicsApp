@@ -1,4 +1,4 @@
-package com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum;
+package com.example.android.mathematicsapp.trainingmode.levelSelectionExerciseNum;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,10 +14,12 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
-import com.example.android.mathematicsapp.trainingmode.ExerciseNum.ExerciseFour;
+import com.example.android.mathematicsapp.trainingmode.exerciseNum.ExerciseThree;
 import com.example.android.mathematicsapp.trainingmode.begin.TrainingModeBeginScreen;
 
-public class LevelSelectionExerciseFour extends AppCompatActivity {
+public class LevelSelectionExerciseThree extends AppCompatActivity {
+
+    // TODO DON'T FORGET TO CHANGE SETCONTENTVIEW AT THE BEGINNING OF ONCREATE METHOD!!! CHANGE LAYOUT!!!
 
     private LinearLayout _linearLayout;
     private LinearLayout _rowOfLevels[] = new LinearLayout[34];
@@ -28,7 +30,7 @@ public class LevelSelectionExerciseFour extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_selection_exercise_four);
+        setContentView(R.layout.activity_level_selection_exercise_three);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setNavigationBarColor(getApplicationContext().getResources().getColor(R.color.dark_bg));
         }
@@ -87,7 +89,7 @@ public class LevelSelectionExerciseFour extends AppCompatActivity {
             _buttonLevel[(i * 3)].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(LevelSelectionExerciseFour.this, ExerciseFour.class);
+                    Intent intent = new Intent(LevelSelectionExerciseThree.this, ExerciseThree.class);
                     intent.putExtra("levelnum", (finalI * 3) + 1);
                     startActivity(intent);
                 }
@@ -95,7 +97,7 @@ public class LevelSelectionExerciseFour extends AppCompatActivity {
             _buttonLevel[(i * 3) + 1].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(LevelSelectionExerciseFour.this, ExerciseFour.class);
+                    Intent intent = new Intent(LevelSelectionExerciseThree.this, ExerciseThree.class);
                     intent.putExtra("levelnum", (finalI * 3) + 2);
                     startActivity(intent);
                 }
@@ -103,7 +105,7 @@ public class LevelSelectionExerciseFour extends AppCompatActivity {
             _buttonLevel[(i * 3) + 2].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(LevelSelectionExerciseFour.this, ExerciseFour.class);
+                    Intent intent = new Intent(LevelSelectionExerciseThree.this, ExerciseThree.class);
                     intent.putExtra("levelnum", (finalI * 3) + 3);
                     startActivity(intent);
                 }
@@ -124,7 +126,7 @@ public class LevelSelectionExerciseFour extends AppCompatActivity {
         _buttonLevel[99].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LevelSelectionExerciseFour.this, ExerciseFour.class);
+                Intent intent = new Intent(LevelSelectionExerciseThree.this, ExerciseThree.class);
                 intent.putExtra("levelnum", 100);
                 startActivity(intent);
             }
@@ -135,7 +137,7 @@ public class LevelSelectionExerciseFour extends AppCompatActivity {
         _backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LevelSelectionExerciseFour.this, TrainingModeBeginScreen.class);
+                Intent intent = new Intent(LevelSelectionExerciseThree.this, TrainingModeBeginScreen.class);
                 startActivity(intent);
             }
         });

@@ -1,4 +1,4 @@
-package com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum;
+package com.example.android.mathematicsapp.trainingmode.levelSelectionExerciseNum;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
-import com.example.android.mathematicsapp.trainingmode.ExerciseNum.ExerciseFive;
+import com.example.android.mathematicsapp.trainingmode.exerciseNum.ExerciseFive;
 import com.example.android.mathematicsapp.trainingmode.begin.TrainingModeBeginScreen;
 
 public class LevelSelectionExerciseFive extends AppCompatActivity {

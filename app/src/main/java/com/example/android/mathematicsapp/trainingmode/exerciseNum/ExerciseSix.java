@@ -1,4 +1,4 @@
-package com.example.android.mathematicsapp.trainingmode.ExerciseNum;
+package com.example.android.mathematicsapp.trainingmode.exerciseNum;
 
 import android.content.Intent;
 import android.os.Build;
@@ -13,9 +13,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
-import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseTwo;
+import com.example.android.mathematicsapp.trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseSix;
 
-public class ExerciseTwo extends AppCompatActivity {
+public class ExerciseSix extends AppCompatActivity {
 
     final int totalSec = 60;
     private LinearLayout[] _sixtyOfALine = new LinearLayout[totalSec];
@@ -33,7 +33,7 @@ public class ExerciseTwo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exercise_two);
+        setContentView(R.layout.activity_exercise_six);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setNavigationBarColor(getApplicationContext().getResources().getColor(R.color.dark_bg));
         }
@@ -42,7 +42,7 @@ public class ExerciseTwo extends AppCompatActivity {
 
         final int levelNum = getIntent().getIntExtra("levelnum", 1);
         TextView actionbarTitle = findViewById(R.id.action_bar_title_exercise_one);
-        actionbarTitle.setText(getApplicationContext().getString(R.string.reading_and_writing_absolute_value) + ". Level: " + levelNum + " / " + 100);
+        actionbarTitle.setText(getApplicationContext().getString(R.string.dividing_signed_numbers) + ". Level: " + levelNum + " / " + 100);
 
         //line code
         LinearLayout line = findViewById(R.id.exercise_one_line);
@@ -94,7 +94,7 @@ public class ExerciseTwo extends AppCompatActivity {
                             questionsDone++;
                             tvCurQuestion.setText("Current Question: " + questionsDone + "/" + 10);
                             if (questionsDone == 10) {
-                                Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                                Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                                 startActivity(intent);
                             } else {
                                 tvTime.setText(mathematicsQuestions(levelNum));
@@ -117,7 +117,7 @@ public class ExerciseTwo extends AppCompatActivity {
                             questionsDone++;
                             tvCurQuestion.setText("Current Question: " + questionsDone + "/" + 10);
                             if (questionsDone == 10) {
-                                Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                                Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                                 startActivity(intent);
                             } else {
                                 tvTime.setText(mathematicsQuestions(levelNum));
@@ -140,7 +140,7 @@ public class ExerciseTwo extends AppCompatActivity {
                             questionsDone++;
                             tvCurQuestion.setText("Current Question: " + questionsDone + "/" + 10);
                             if (questionsDone == 10) {
-                                Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                                Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                                 startActivity(intent);
                             } else {
                                 tvTime.setText(mathematicsQuestions(levelNum));
@@ -163,7 +163,7 @@ public class ExerciseTwo extends AppCompatActivity {
                             questionsDone++;
                             tvCurQuestion.setText("Current Question: " + questionsDone + "/" + 10);
                             if (questionsDone == 10) {
-                                Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                                Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                                 startActivity(intent);
                             } else {
                                 tvTime.setText(mathematicsQuestions(levelNum));
@@ -186,7 +186,7 @@ public class ExerciseTwo extends AppCompatActivity {
                             questionsDone++;
                             tvCurQuestion.setText("Current Question: " + questionsDone + "/" + 10);
                             if (questionsDone == 10) {
-                                Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                                Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                                 startActivity(intent);
                             } else {
                                 tvTime.setText(mathematicsQuestions(levelNum));
@@ -209,7 +209,7 @@ public class ExerciseTwo extends AppCompatActivity {
                             questionsDone++;
                             tvCurQuestion.setText("Current Question: " + questionsDone + "/" + 10);
                             if (questionsDone == 10) {
-                                Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                                Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                                 startActivity(intent);
                             } else {
                                 tvTime.setText(mathematicsQuestions(levelNum));
@@ -232,7 +232,7 @@ public class ExerciseTwo extends AppCompatActivity {
                             questionsDone++;
                             tvCurQuestion.setText("Current Question: " + questionsDone + "/" + 10);
                             if (questionsDone == 10) {
-                                Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                                Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                                 startActivity(intent);
                             } else {
                                 tvTime.setText(mathematicsQuestions(levelNum));
@@ -255,7 +255,7 @@ public class ExerciseTwo extends AppCompatActivity {
                             questionsDone++;
                             tvCurQuestion.setText("Current Question: " + questionsDone + "/" + 10);
                             if (questionsDone == 10) {
-                                Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                                Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                                 startActivity(intent);
                             } else {
                                 tvTime.setText(mathematicsQuestions(levelNum));
@@ -278,7 +278,7 @@ public class ExerciseTwo extends AppCompatActivity {
                             questionsDone++;
                             tvCurQuestion.setText("Current Question: " + questionsDone + "/" + 10);
                             if (questionsDone == 10) {
-                                Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                                Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                                 startActivity(intent);
                             } else {
                                 tvTime.setText(mathematicsQuestions(levelNum));
@@ -301,7 +301,7 @@ public class ExerciseTwo extends AppCompatActivity {
                             questionsDone++;
                             tvCurQuestion.setText("Current Question: " + questionsDone + "/" + 10);
                             if (questionsDone == 10) {
-                                Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                                Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                                 startActivity(intent);
                             } else {
                                 tvTime.setText(mathematicsQuestions(levelNum));
@@ -324,7 +324,7 @@ public class ExerciseTwo extends AppCompatActivity {
                             questionsDone++;
                             tvCurQuestion.setText("Current Question: " + questionsDone + "/" + 10);
                             if (questionsDone == 10) {
-                                Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                                Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                                 startActivity(intent);
                             } else {
                                 tvTime.setText(mathematicsQuestions(levelNum));
@@ -359,7 +359,7 @@ public class ExerciseTwo extends AppCompatActivity {
                                 isTimerDone[0] = true;
                                 if (isTimerDone[0]) {
                                     if (stop[0] == 0 && isBackButtonPressed == false && isWrongAnswered == false) {
-                                        Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                                        Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                                         startActivity(intent);
                                         stop[0]++;
                                     }
@@ -383,35 +383,36 @@ public class ExerciseTwo extends AppCompatActivity {
     // --------------------------------------------------------- <MAKE MATHEMATICAL QUESTIONS! (BEGINS) -------------------------------------------------------
 
     private String mathematicsQuestions(int levelNum) {
+
         String question = "";
-        int num;
+        int num1, num2;
         double min, max;
 
         if (levelNum >= 1 && levelNum <= 100) {
-            // phase 2 (integers)
 
             min = levelNum;
-            max = levelNum * 5 + 15;
-            num = (int) (Math.random() * (max - min + 1) + min);
+            max = levelNum * 2 + 2;
+            num1 = (int) (Math.random() * (max - min + 1) + min);
+            num2 = (int) (Math.random() * (max - min + 1) + min);
 
             int ranNegPosNum1 = (int) (Math.random() * 2 + 1);
             int ranNegPosNum2 = (int) (Math.random() * 2 + 1);
+            if (ranNegPosNum1 == 2) { ranNegPosNum1 = -1; num1 *= ranNegPosNum1; }
+            if (ranNegPosNum2 == 2) { ranNegPosNum2 = -1; num2 *= ranNegPosNum2; }
 
-            String neg1, neg2;
-            if (ranNegPosNum1 == 2) { neg1 = "-"; } else { neg1 = ""; }
-            if (ranNegPosNum2 == 2) { neg2 = "-"; } else { neg2 = ""; }
+            checkAnswer(num1);
+            String part1, part2;
 
-            checkAnswer(num, ranNegPosNum1);
-            question = neg1 + "|" + neg2 + num + "| = ";
+            part1 = "(" + (num1 * num2) + ")";
+            part2 = "(" + num2 + ")";
+            question = part1 + " / " + part2 + " = ";
         }
 
         return question;
     }
 
-    private void checkAnswer(int num, int ranNegPosSign1) {
-        Math.abs(num);
-        if (ranNegPosSign1 == 2) { num *= -1; }
-        answer = "" + num;
+    private void checkAnswer(int num1) {
+        answer = "" + num1;
     }
 
     // --------------------------------------------------------- <<MAKE MATHEMATICAL QUESTIONS! (ENDS) -------------------------------------------------------
@@ -421,7 +422,7 @@ public class ExerciseTwo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 isBackButtonPressed = true;
-                Intent intent = new Intent(ExerciseTwo.this, LevelSelectionExerciseTwo.class);
+                Intent intent = new Intent(ExerciseSix.this, LevelSelectionExerciseSix.class);
                 startActivity(intent);
             }
         });
