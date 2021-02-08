@@ -1,6 +1,7 @@
 package com.example.android.mathematicsapp.homescreen;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -16,8 +17,8 @@ import java.util.Date;
 
 public class HomeScreenActivity extends AppCompatActivity {
 
-    // TODO fix all the intents, so you can also go back to home screen.
     // TODO Add explanation activities for every exercise.
+    // TODO Add the remaining 7 to 10 exercises!
     // TODO Make advancements activity.
     // TODO Save exp after you did an exercise (+1 exp).
     // TODO When snake image clicked, you got the new achievement, "snake gamer (:".
@@ -31,6 +32,9 @@ public class HomeScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setNavigationBarColor(getApplicationContext().getResources().getColor(R.color.dark_bg));
+        }
 
         changeText();
         buttonIntents();

@@ -3,16 +3,13 @@
     <string name="mathematics">Mathematics</string>
 
     <!-- Mathematics Home Screen Custom Action Bar String Res -->
-    <string name="exp">%s exp</string>
-    <string name="total">total</string>
-    <string name="diagram">diagram</string>
-    <string name="day_streak">%s day(s) streak</string>
-    <string name="daily_goal">%s</string>
-    <string name="cash">%s</string>
-    <string name="current_date">%s</string>
+    <string name="exp">%s exp total</string>
+    <string name="current_date">current date: %s</string>
 
     <!-- Mathematics Home Screen Button String Res -->
     <string name="training_mode">Training Mode</string>
+    <string name="challenge_mode">Challenge Mode</string>
+    <string name="cookie_mode">Cookie Mode!!!</string>
     <string name="advancements">Advancements</string>
 
     <!-- Snake String Res -->

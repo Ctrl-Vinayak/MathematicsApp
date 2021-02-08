@@ -4,127 +4,254 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.android.mathematicsapp.homescreen.HomeScreenActivity">
+    android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/home_screen_action_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        tools:background="@color/neon_blue">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/exp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/exp"
-                android:textSize="18sp"
-                tools:text="11608 exp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/total"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-    </RelativeLayout>
     <LinearLayout
         android:id="@+id/home_screen_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-
-            <ImageView
-                android:id="@+id/snake_image"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"
-                android:src="@drawable/ic_snake"
-                android:layout_marginStart="10dp" />
-
-            <RelativeLayout
-                android:id="@+id/date_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_centerInParent="true"
-                android:layout_toRightOf="@+id/snake_image"
-                android:layout_marginHorizontal="10dp"
-                android:paddingHorizontal="12dp"
-                android:layout_toEndOf="@+id/snake_image">
-
-                <TextView
-                    android:id="@+id/date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="@string/current_date"
-                    android:textSize="16sp"
-                    tools:text="28-11-2020" />
-
-            </RelativeLayout>
-        </RelativeLayout>
+        android:orientation="vertical"
+        android:background="@color/dark_bg">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="30dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="20">
 
             <RelativeLayout
-                android:id="@+id/training_mode_btn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:padding="3dp">
+                android:layout_height="0dp"
+                android:layout_weight="3">
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_muscle" />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="@string/training_mode"
-                    android:textSize="30sp" />
+                    android:layout_margin="15dp"
+                    android:padding="3dp"
+                    android:background="@color/neon_orange">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/mathematics"
+                        android:textSize="40sp" />
+
+                </RelativeLayout>
 
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/advancements_btn"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:padding="3dp">
+                android:layout_height="0dp"
+                android:layout_weight="14">
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/ic_trophy" />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="@string/advancements"
-                    android:textSize="30sp" />
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+
+                    <RelativeLayout
+                        android:id="@+id/training_mode_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:padding="3dp"
+                        android:background="@color/neon_orange">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_single" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/training_mode"
+                            android:textSize="30sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/challenge_mode_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:padding="3dp"
+                        android:background="@color/neon_orange">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_muscle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/challenge_mode"
+                            android:textSize="30sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/cookie_mode_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:padding="3dp"
+                        android:background="@color/neon_orange">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_cookie" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/cookie_mode"
+                            android:textSize="30sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/advancements_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:padding="3dp"
+                        android:background="@color/neon_orange">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_trophy" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/advancements"
+                            android:textSize="30sp" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/snake_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/ic_snake"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                    <RelativeLayout
+                        android:id="@+id/exp_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_above="@+id/date_layout"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:background="@color/neon_orange">
+
+                        <TextView
+                            android:id="@+id/exp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="current_exp"
+                            android:textSize="12sp"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/date_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingHorizontal="10dp"
+                        android:background="@color/neon_orange">
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/current_date"
+                            android:textSize="12sp"/>
+
+                    </RelativeLayout>
+
+<!--                <RelativeLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@color/neon_orange">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/snake_image"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_gravity="center_vertical"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:src="@drawable/ic_snake"-->
+<!--                        android:layout_marginStart="10dp" />-->
+
+<!--                    <RelativeLayout-->
+<!--                        android:id="@+id/date_layout"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        android:layout_toRightOf="@+id/snake_image"-->
+<!--                        android:layout_marginHorizontal="10dp"-->
+<!--                        android:paddingHorizontal="12dp"-->
+<!--                        android:layout_toEndOf="@+id/snake_image">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/date"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_centerInParent="true"-->
+<!--                            android:text="@string/current_date"-->
+<!--                            android:textSize="16sp"-->
+<!--                            tools:text="28-11-2020" />-->
+
+<!--                    </RelativeLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:layout_marginStart="10dp"-->
+<!--                        android:layout_marginLeft="10dp"-->
+<!--                        android:layout_toRightOf="@id/date_layout"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/exp"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="@string/exp"-->
+<!--                            android:textSize="18sp"/>-->
+
+<!--                    </LinearLayout>-->
+<!--                </RelativeLayout>-->
 
             </RelativeLayout>
         </LinearLayout>

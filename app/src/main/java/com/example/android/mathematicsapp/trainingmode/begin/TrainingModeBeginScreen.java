@@ -8,6 +8,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
+import com.example.android.mathematicsapp.homescreen.HomeScreenActivity;
 import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseFive;
 import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseFour;
 import com.example.android.mathematicsapp.trainingmode.LevelSelectionExerciseNum.LevelSelectionExerciseOne;
@@ -29,6 +30,13 @@ public class TrainingModeBeginScreen extends AppCompatActivity {
     }
 
     private void buttonIntents() {
+        findViewById(R.id.training_mode_back_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrainingModeBeginScreen.this, HomeScreenActivity.class);
+                startActivity(intent);
+            }
+        });
         findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
