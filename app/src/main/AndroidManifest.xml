@@ -61,10 +61,16 @@
         <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseFour"
             android:screenOrientation="sensorPortrait">
         </activity>
+        <activity android:name=".trainingmode.exerciseTheory.TheoryFive"
+            android:screenOrientation="sensorPortrait">
+        </activity>
         <activity android:name=".trainingmode.exerciseNum.ExerciseFive"
             android:screenOrientation="sensorPortrait">
         </activity>
         <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseFive"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.exerciseTheory.TheorySix"
             android:screenOrientation="sensorPortrait">
         </activity>
         <activity android:name=".trainingmode.exerciseNum.ExerciseSix"
