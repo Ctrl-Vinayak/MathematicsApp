@@ -1,12 +1,11 @@
 package com.example.android.mathematicsapp.cookiemode;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -30,11 +29,14 @@ public class CookieActivity extends AppCompatActivity {
             getWindow().setNavigationBarColor(getApplicationContext().getResources().getColor(R.color.dark_bg));
         }
 
+        SharedPreferences cookiePref = this.getSharedPreferences("cookieMode", Context.MODE_PRIVATE);
+        int totalCookies = cookiePref.getInt("totalCookies", 0);
+
         buttonIntents();
 
         final int levelNum = 200;
         final TextView actionbarTitle = findViewById(R.id.action_bar_title_exercise_one);
-        actionbarTitle.setText(getApplicationContext().getString(R.string.cookie_mode));
+        actionbarTitle.setText(getApplicationContext().getString(R.string.cookie_mode) + ", Total Cookies: " + totalCookies);
 
         final RelativeLayout butOne = findViewById(R.id.one);
         final RelativeLayout butTwo = findViewById(R.id.two);
@@ -438,11 +440,17 @@ public class CookieActivity extends AppCompatActivity {
 
     // --------------------------------------------------------- <<MAKE MATHEMATICAL QUESTIONS! (ENDS) -------------------------------------------------------
 
+    private void saveDate() {
+        SharedPreferences cookiePref = this.getSharedPreferences("cookieMode", Context.MODE_PRIVATE);
+        cookiePref.edit().putInt("totalCookies", questionsDone + cookiePref.getInt("totalCookies", 0)).apply();
+    }
+
     private void buttonIntents() {
         findViewById(R.id.exercise_one_back_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 isBackButtonPressed = true;
+                saveDate();
                 Intent intent = new Intent(CookieActivity.this, HomeScreenActivity.class);
                 startActivity(intent);
             }
