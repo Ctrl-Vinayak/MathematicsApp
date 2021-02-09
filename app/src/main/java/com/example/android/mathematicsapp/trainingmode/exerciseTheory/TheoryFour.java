@@ -10,34 +10,32 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
 import com.example.android.mathematicsapp.trainingmode.begin.TrainingModeBeginScreen;
-import com.example.android.mathematicsapp.trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseThree;
+import com.example.android.mathematicsapp.trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseFour;
 
-public class TheoryThree extends AppCompatActivity {
+public class TheoryFour extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_theory_three);
+        setContentView(R.layout.activity_theory_four);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             getWindow().setNavigationBarColor(getApplicationContext().getResources().getColor(R.color.dark_bg));
         }
 
         TextView actionBarTitle = (TextView) findViewById(R.id.action_bar_title_exercise_theory);
-        actionBarTitle.setText(getApplicationContext().getString(R.string.added_signed_numbers) + ", THEORY");
+        actionBarTitle.setText(getApplicationContext().getString(R.string.making_a_difference_with_signed_numbers) + ", THEORY");
 
-        String theoryString = "i: To add signed numbers (assuming that a and b are positive numbers):\n\n" +
-                "ii: If the signs are the same: Add the absolute values of the two numbers together and let their common sign be the sign of the answer.\n" +
-                "(+a) + (+b) = +(a + b) and (-a) + (-b) = -(a + b)\n\n" +
-                "iii: If the signs are different: Find the difference between the absolute values of the two numbers (subtract the smaller absolute value from the larger) and let the answer have the sign of the number with the larger absolute value.\n" +
-                "Assume that |a| > |b|.\n" +
-                "(+a) + (+b) = +(a - b) and (-a) + (+b) = -(a - b)";
+        String theoryString = "i: You just change the subtraction problem to an addition problem and use the rules for addition of signed numbers.\n\n" +
+                "ii: To ensure that the answer to this new addition problem is the answer to the original subtraction problem, you change the operation from subtraction to addition, and you change the sign of the second number, the one that's being subtracted.\n\n" +
+                "iii: To subtract two signed numbers:\n" +
+                "a - (+b) = a + (-b) and a - (-b) = a + (+b)";
         TextView theory = (TextView) findViewById(R.id.theory);
         theory.setText(theoryString);
 
-        String exampleString = "4 + (-3) = 1\n\n" +
-                "5 + (-11) = -6\n\n" +
-                "(-18) + (-5) = -23\n\n" +
-                "47 + (-33) = 14";
+        String exampleString = "5 - (-2) = -7\n\n" +
+                "-6 - (-8) = 2\n\n" +
+                "4 - 87 = -83\n\n" +
+                "0 - (-15) = 15";
         TextView example = (TextView) findViewById(R.id.example);
         example.setText(exampleString);
 
@@ -48,14 +46,14 @@ public class TheoryThree extends AppCompatActivity {
         findViewById(R.id.theory_back_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TheoryThree.this, TrainingModeBeginScreen.class);
+                Intent intent = new Intent(TheoryFour.this, TrainingModeBeginScreen.class);
                 startActivity(intent);
             }
         });
         findViewById(R.id.ok_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TheoryThree.this, LevelSelectionExerciseThree.class);
+                Intent intent = new Intent(TheoryFour.this, LevelSelectionExerciseFour.class);
                 startActivity(intent);
             }
         });

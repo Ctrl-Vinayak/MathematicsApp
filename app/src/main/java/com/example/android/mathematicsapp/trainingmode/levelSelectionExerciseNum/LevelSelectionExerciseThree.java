@@ -19,8 +19,6 @@ import com.example.android.mathematicsapp.trainingmode.begin.TrainingModeBeginSc
 
 public class LevelSelectionExerciseThree extends AppCompatActivity {
 
-    // TODO DON'T FORGET TO CHANGE SETCONTENTVIEW AT THE BEGINNING OF ONCREATE METHOD!!! CHANGE LAYOUT!!!
-
     private LinearLayout _linearLayout;
     private LinearLayout _rowOfLevels[] = new LinearLayout[34];
     private Button _buttonLevel[] = new Button[100];
