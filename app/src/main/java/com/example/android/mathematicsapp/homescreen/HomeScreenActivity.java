@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
+import com.example.android.mathematicsapp.challengemode.ChallengeActivity;
 import com.example.android.mathematicsapp.snakegame.SnakeActivity;
 import com.example.android.mathematicsapp.trainingmode.begin.TrainingModeBeginScreen;
 
@@ -66,6 +67,13 @@ public class HomeScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeScreenActivity.this, TrainingModeBeginScreen.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.challenge_mode_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeScreenActivity.this, ChallengeActivity.class);
                 startActivity(intent);
             }
         });

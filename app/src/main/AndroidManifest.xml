@@ -79,5 +79,8 @@
         <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseSix"
             android:screenOrientation="sensorPortrait">
         </activity>
+        <activity android:name=".challengemode.ChallengeActivity"
+            android:screenOrientation="sensorPortrait">
+        </activity>
     </application>
 </manifest>
