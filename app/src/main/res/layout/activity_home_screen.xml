@@ -120,28 +120,6 @@
 
                     </RelativeLayout>
 
-                    <RelativeLayout
-                        android:id="@+id/advancements_btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="15dp"
-                        android:padding="3dp"
-                        android:background="@color/neon_orange">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:src="@drawable/ic_trophy" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="@string/advancements"
-                            android:textSize="30sp" />
-
-                    </RelativeLayout>
-
                     <ImageView
                         android:id="@+id/snake_image"
                         android:layout_width="40dp"
@@ -158,27 +136,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="3">
 
-                    <RelativeLayout
-                        android:id="@+id/exp_layout"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_above="@+id/date_layout"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:paddingHorizontal="10dp"
-                        android:background="@color/neon_orange">
-
-                        <TextView
-                            android:id="@+id/exp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="current_exp"
-                            android:textSize="12sp"/>
-
-                    </RelativeLayout>
-                    <RelativeLayout
+                <RelativeLayout
                         android:id="@+id/date_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"

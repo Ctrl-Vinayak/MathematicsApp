@@ -82,5 +82,8 @@
         <activity android:name=".challengemode.ChallengeActivity"
             android:screenOrientation="sensorPortrait">
         </activity>
+        <activity android:name=".cookiemode.CookieActivity"
+            android:screenOrientation="sensorPortrait">
+        </activity>
     </application>
 </manifest>
