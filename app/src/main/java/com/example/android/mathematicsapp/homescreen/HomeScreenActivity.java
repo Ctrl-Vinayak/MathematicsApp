@@ -1,9 +1,12 @@
 package com.example.android.mathematicsapp.homescreen;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +34,14 @@ public class HomeScreenActivity extends AppCompatActivity {
 
         changeText();
         buttonIntents();
+
+        SharedPreferences cookiePref = this.getSharedPreferences("cookieMode", Context.MODE_PRIVATE);
+        int totalCookies = cookiePref.getInt("totalCookies", 0);
+        ImageView snakeGame = (ImageView) findViewById(R.id.snake_image);
+        snakeGame.setVisibility(View.INVISIBLE);
+        if (totalCookies >= 200) {
+            snakeGame.setVisibility(View.VISIBLE);
+        }
     }
 
     private void changeText() {
