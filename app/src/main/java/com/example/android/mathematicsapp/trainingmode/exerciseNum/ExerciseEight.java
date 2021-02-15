@@ -390,23 +390,24 @@ public class ExerciseEight extends AppCompatActivity {
 
         if (levelNum >= 1 && levelNum <= 100) {
 
+//            int test = (int) (Math.random() * (9 - 1) + 2);
+
             min = levelNum;
             max = levelNum * 2 + 2;
             num1 = (int) (Math.random() * (max - min + 1) + min);
             num2 = (int) (Math.random() * (max - min + 1) + min);
 
-            int ranNegPosNum1 = (int) (Math.random() * 2 + 1);
-            int ranNegPosNum2 = (int) (Math.random() * 2 + 1);
-            if (ranNegPosNum1 == 2) { ranNegPosNum1 = -1; num1 *= ranNegPosNum1; }
-            if (ranNegPosNum2 == 2) { ranNegPosNum2 = -1; num2 *= ranNegPosNum2; }
-
-            int ranBracketsPlacement = (int) (Math.random() * 2 + 1);
+            int ranBracketsPlacement = (int) (Math.random() * 4 + 1);
             checkAnswer(num1, num2, ranBracketsPlacement);
 
             if (ranBracketsPlacement == 1) {
                 question = num1 + "(1/" + num1 + " * " + num2 + ")" + " = ";
             } else if (ranBracketsPlacement == 2){
                 question = "(1/" + num2 + " * " + num1 + ")" + num2 + " = ";
+            } else if (ranBracketsPlacement == 3) {
+                question = num1 + "(" + num2 + " * " + "1/" + num1 + ")" + " = ";
+            } else if (ranBracketsPlacement == 4) {
+                question = "(1/" + num1 + " * " + num2 + ")" + num1 + " = ";
             }
         }
 
@@ -418,6 +419,10 @@ public class ExerciseEight extends AppCompatActivity {
             answer = "" + (num2);
         } else if (ranBracketsPlacement == 2) {
             answer = "" + (num1);
+        } else if (ranBracketsPlacement == 3) {
+            answer = "" + (num2);
+        } else if (ranBracketsPlacement == 4) {
+            answer = "" + (num2);
         }
     }
 

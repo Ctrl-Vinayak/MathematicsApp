@@ -422,18 +422,17 @@ public class CookieActivity extends AppCompatActivity {
                 num1 = (int) (Math.random() * (max - min + 1) + min);
                 num2 = (int) (Math.random() * (max - min + 1) + min);
 
-                int ranNegPosNum1 = (int) (Math.random() * 2 + 1);
-                int ranNegPosNum2 = (int) (Math.random() * 2 + 1);
-                if (ranNegPosNum1 == 2) { ranNegPosNum1 = -1; num1 *= ranNegPosNum1; }
-                if (ranNegPosNum2 == 2) { ranNegPosNum2 = -1; num2 *= ranNegPosNum2; }
-
-                int ranBracketsPlacement = (int) (Math.random() * 2 + 1);
+                int ranBracketsPlacement = (int) (Math.random() * 4 + 1);
 
                 // check answer begin part
                 if (ranBracketsPlacement == 1) {
                     answer = "" + (num2);
                 } else if (ranBracketsPlacement == 2) {
                     answer = "" + (num1);
+                } else if (ranBracketsPlacement == 3) {
+                    answer = "" + (num2);
+                } else if (ranBracketsPlacement == 4) {
+                    answer = "" + (num2);
                 }
                 // check answer end part
 
@@ -441,6 +440,10 @@ public class CookieActivity extends AppCompatActivity {
                     question = num1 + "(1/" + num1 + " * " + num2 + ")" + " = ";
                 } else if (ranBracketsPlacement == 2){
                     question = "(1/" + num2 + " * " + num1 + ")" + num2 + " = ";
+                } else if (ranBracketsPlacement == 3) {
+                    question = num1 + "(" + num2 + " * " + "1/" + num1 + ")" + " = ";
+                } else if (ranBracketsPlacement == 4) {
+                    question = "(1/" + num1 + " * " + num2 + ")" + num1 + " = ";
                 }
             }
         } else if (questionType == 9) {
