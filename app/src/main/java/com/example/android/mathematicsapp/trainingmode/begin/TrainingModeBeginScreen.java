@@ -21,9 +21,6 @@ import com.example.android.mathematicsapp.trainingmode.exerciseTheory.TheoryTwo;
 
 public class TrainingModeBeginScreen extends AppCompatActivity {
 
-    // TODO add a few extra exercises in this app!
-    // TODO this is for the presentation, so I can talk more about my app (:
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
