@@ -79,6 +79,33 @@
         <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseSix"
             android:screenOrientation="sensorPortrait">
         </activity>
+        <activity android:name=".trainingmode.exerciseTheory.TheorySeven"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.exerciseNum.ExerciseSeven"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseSeven"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.exerciseTheory.TheoryEight"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.exerciseNum.ExerciseEight"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseEight"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.exerciseTheory.TheoryNine"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.exerciseNum.ExerciseNine"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".trainingmode.levelSelectionExerciseNum.LevelSelectionExerciseNine"
+            android:screenOrientation="sensorPortrait">
+        </activity>
         <activity android:name=".challengemode.ChallengeActivity"
             android:screenOrientation="sensorPortrait">
         </activity>

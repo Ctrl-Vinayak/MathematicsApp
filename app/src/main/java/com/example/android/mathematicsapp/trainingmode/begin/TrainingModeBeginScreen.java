@@ -9,9 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.android.mathematicsapp.R;
 import com.example.android.mathematicsapp.homescreen.HomeScreenActivity;
+import com.example.android.mathematicsapp.trainingmode.exerciseTheory.TheoryEight;
 import com.example.android.mathematicsapp.trainingmode.exerciseTheory.TheoryFive;
 import com.example.android.mathematicsapp.trainingmode.exerciseTheory.TheoryFour;
+import com.example.android.mathematicsapp.trainingmode.exerciseTheory.TheoryNine;
 import com.example.android.mathematicsapp.trainingmode.exerciseTheory.TheoryOne;
+import com.example.android.mathematicsapp.trainingmode.exerciseTheory.TheorySeven;
 import com.example.android.mathematicsapp.trainingmode.exerciseTheory.TheorySix;
 import com.example.android.mathematicsapp.trainingmode.exerciseTheory.TheoryThree;
 import com.example.android.mathematicsapp.trainingmode.exerciseTheory.TheoryTwo;
@@ -79,6 +82,27 @@ public class TrainingModeBeginScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(TrainingModeBeginScreen.this, TheorySix.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.button7).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrainingModeBeginScreen.this, TheorySeven.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.button8).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrainingModeBeginScreen.this, TheoryEight.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.button9).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrainingModeBeginScreen.this, TheoryNine.class);
                 startActivity(intent);
             }
         });

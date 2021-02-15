@@ -27,10 +27,11 @@
     <!-- 4 --> <string name="making_a_difference_with_signed_numbers">Making a difference with signed numbers</string>
     <!-- 5 --> <string name="multiplying_signed_numbers">Multiplying signed numbers</string>
     <!-- 6 --> <string name="dividing_signed_numbers">Dividing signed numbers</string>
-    <!-- 7 --> <string name="grouping_symbols">Grouping symbols</string>
-    <!-- 8 --> <string name="distributive_property">Distributive property</string>
-    <!-- 9 --> <string name="associative_rule">Associative rule</string>
-    <!-- 10 --> <string name="commutative_rule">Commutative rule</string>
+<!--    &lt;!&ndash; 7 &ndash;&gt; <string name="grouping_symbols">Grouping symbols</string>-->
+    <!-- 7 --> <string name="distributive_property">Distributive property</string>
+    <!-- 8 --> <string name="associative_rule">Associative rule</string>
+<!--    &lt;!&ndash; 10 &ndash;&gt; <string name="commutative_rule">Commutative rule</string>-->
+    <!-- 9 --> <string name="solve_basic_equations">Solve basic equations</string>
 
     <!-- Assigning numbers their place -->
     <string name="which_is_larger">Which is larger, </string>

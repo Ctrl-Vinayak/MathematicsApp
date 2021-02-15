@@ -91,13 +91,8 @@ public class ChallengeActivity extends AppCompatActivity {
                             }
                             questionsDone++;
                             actionbarTitle.setText(getApplicationContext().getString(R.string.challenge_mode) + ". questions done: " + questionsDone);
-                            if (questionsDone == 10) {
-                                Intent intent = new Intent(ChallengeActivity.this, HomeScreenActivity.class);
-                                startActivity(intent);
-                            } else {
-                                tvTime.setText(mathematicsQuestions(levelNum));
-                                userInput = "";
-                            }
+                            tvTime.setText(mathematicsQuestions(levelNum));
+                            userInput = "";
                         }
                     }
                 });
@@ -114,13 +109,8 @@ public class ChallengeActivity extends AppCompatActivity {
                             }
                             questionsDone++;
                             actionbarTitle.setText(getApplicationContext().getString(R.string.challenge_mode) + ". questions done: " + questionsDone);
-                            if (questionsDone == 10) {
-                                Intent intent = new Intent(ChallengeActivity.this, HomeScreenActivity.class);
-                                startActivity(intent);
-                            } else {
-                                tvTime.setText(mathematicsQuestions(levelNum));
-                                userInput = "";
-                            }
+                            tvTime.setText(mathematicsQuestions(levelNum));
+                            userInput = "";
                         }
                     }
                 });
@@ -137,13 +127,8 @@ public class ChallengeActivity extends AppCompatActivity {
                             }
                             questionsDone++;
                             actionbarTitle.setText(getApplicationContext().getString(R.string.challenge_mode) + ". questions done: " + questionsDone);
-                            if (questionsDone == 10) {
-                                Intent intent = new Intent(ChallengeActivity.this, HomeScreenActivity.class);
-                                startActivity(intent);
-                            } else {
-                                tvTime.setText(mathematicsQuestions(levelNum));
-                                userInput = "";
-                            }
+                            tvTime.setText(mathematicsQuestions(levelNum));
+                            userInput = "";
                         }
                     }
                 });
@@ -160,13 +145,8 @@ public class ChallengeActivity extends AppCompatActivity {
                             }
                             questionsDone++;
                             actionbarTitle.setText(getApplicationContext().getString(R.string.challenge_mode) + ". questions done: " + questionsDone);
-                            if (questionsDone == 10) {
-                                Intent intent = new Intent(ChallengeActivity.this, HomeScreenActivity.class);
-                                startActivity(intent);
-                            } else {
-                                tvTime.setText(mathematicsQuestions(levelNum));
-                                userInput = "";
-                            }
+                            tvTime.setText(mathematicsQuestions(levelNum));
+                            userInput = "";
                         }
                     }
                 });
@@ -183,13 +163,8 @@ public class ChallengeActivity extends AppCompatActivity {
                             }
                             questionsDone++;
                             actionbarTitle.setText(getApplicationContext().getString(R.string.challenge_mode) + ". questions done: " + questionsDone);
-                            if (questionsDone == 10) {
-                                Intent intent = new Intent(ChallengeActivity.this, HomeScreenActivity.class);
-                                startActivity(intent);
-                            } else {
-                                tvTime.setText(mathematicsQuestions(levelNum));
-                                userInput = "";
-                            }
+                            tvTime.setText(mathematicsQuestions(levelNum));
+                            userInput = "";
                         }
                     }
                 });
@@ -206,13 +181,8 @@ public class ChallengeActivity extends AppCompatActivity {
                             }
                             questionsDone++;
                             actionbarTitle.setText(getApplicationContext().getString(R.string.challenge_mode) + ". questions done: " + questionsDone);
-                            if (questionsDone == 10) {
-                                Intent intent = new Intent(ChallengeActivity.this, HomeScreenActivity.class);
-                                startActivity(intent);
-                            } else {
-                                tvTime.setText(mathematicsQuestions(levelNum));
-                                userInput = "";
-                            }
+                            tvTime.setText(mathematicsQuestions(levelNum));
+                            userInput = "";
                         }
                     }
                 });
@@ -229,13 +199,8 @@ public class ChallengeActivity extends AppCompatActivity {
                             }
                             questionsDone++;
                             actionbarTitle.setText(getApplicationContext().getString(R.string.challenge_mode) + ". questions done: " + questionsDone);
-                            if (questionsDone == 10) {
-                                Intent intent = new Intent(ChallengeActivity.this, HomeScreenActivity.class);
-                                startActivity(intent);
-                            } else {
-                                tvTime.setText(mathematicsQuestions(levelNum));
-                                userInput = "";
-                            }
+                            tvTime.setText(mathematicsQuestions(levelNum));
+                            userInput = "";
                         }
                     }
                 });
@@ -252,13 +217,8 @@ public class ChallengeActivity extends AppCompatActivity {
                             }
                             questionsDone++;
                             actionbarTitle.setText(getApplicationContext().getString(R.string.challenge_mode) + ". questions done: " + questionsDone);
-                            if (questionsDone == 10) {
-                                Intent intent = new Intent(ChallengeActivity.this, HomeScreenActivity.class);
-                                startActivity(intent);
-                            } else {
-                                tvTime.setText(mathematicsQuestions(levelNum));
-                                userInput = "";
-                            }
+                            tvTime.setText(mathematicsQuestions(levelNum));
+                            userInput = "";
                         }
                     }
                 });
@@ -275,13 +235,8 @@ public class ChallengeActivity extends AppCompatActivity {
                             }
                             questionsDone++;
                             actionbarTitle.setText(getApplicationContext().getString(R.string.challenge_mode) + ". questions done: " + questionsDone);
-                            if (questionsDone == 10) {
-                                Intent intent = new Intent(ChallengeActivity.this, HomeScreenActivity.class);
-                                startActivity(intent);
-                            } else {
-                                tvTime.setText(mathematicsQuestions(levelNum));
-                                userInput = "";
-                            }
+                            tvTime.setText(mathematicsQuestions(levelNum));
+                            userInput = "";
                         }
                     }
                 });
@@ -298,13 +253,8 @@ public class ChallengeActivity extends AppCompatActivity {
                             }
                             questionsDone++;
                             actionbarTitle.setText(getApplicationContext().getString(R.string.challenge_mode) + ". questions done: " + questionsDone);
-                            if (questionsDone == 10) {
-                                Intent intent = new Intent(ChallengeActivity.this, HomeScreenActivity.class);
-                                startActivity(intent);
-                            } else {
-                                tvTime.setText(mathematicsQuestions(levelNum));
-                                userInput = "";
-                            }
+                            tvTime.setText(mathematicsQuestions(levelNum));
+                            userInput = "";
                         }
                     }
                 });
@@ -321,13 +271,8 @@ public class ChallengeActivity extends AppCompatActivity {
                             }
                             questionsDone++;
                             actionbarTitle.setText(getApplicationContext().getString(R.string.challenge_mode) + ". questions done: " + questionsDone);
-                            if (questionsDone == 10) {
-                                Intent intent = new Intent(ChallengeActivity.this, HomeScreenActivity.class);
-                                startActivity(intent);
-                            } else {
-                                tvTime.setText(mathematicsQuestions(levelNum));
-                                userInput = "";
-                            }
+                            tvTime.setText(mathematicsQuestions(levelNum));
+                            userInput = "";
                         }
                     }
                 });
@@ -382,7 +327,7 @@ public class ChallengeActivity extends AppCompatActivity {
 
     private String mathematicsQuestions(int levelNum) {
 
-        int questionType = (int) (Math.random() * (6 - 1) + 2);
+        int questionType = (int) (Math.random() * (9 - 1) + 2);
         String question = "";
 
         if (questionType == 2) {
@@ -534,6 +479,92 @@ public class ChallengeActivity extends AppCompatActivity {
                 part1 = "(" + (num1 * num2) + ")";
                 part2 = "(" + num2 + ")";
                 question = part1 + " / " + part2 + " = ";
+            }
+        } else if (questionType == 7) {
+            int num1, num2, num3;
+            double min, max;
+
+            if (levelNum >= 1 && levelNum <= 100) {
+
+                min = levelNum;
+                max = levelNum * 2 + 2;
+                num1 = (int) (Math.random() * (max - min + 1) + min);
+                num2 = (int) (Math.random() * (max - min + 1) + min);
+                num3 = (int) (Math.random() * (max - min + 1) + min);
+
+                int ranNegPosNum1 = (int) (Math.random() * 2 + 1);
+                int ranNegPosNum2 = (int) (Math.random() * 2 + 1);
+                int ranNegPosNum3 = (int) (Math.random() * 2 + 1);
+                if (ranNegPosNum1 == 2) { ranNegPosNum1 = -1; num1 *= ranNegPosNum1; }
+                if (ranNegPosNum2 == 2) { ranNegPosNum2 = -1; num2 *= ranNegPosNum2; }
+                if (ranNegPosNum3 == 2) { ranNegPosNum3 = -1; num3 *= ranNegPosNum3; }
+
+                int ranPlusOrMinus = (int) (Math.random() * 2 + 1);
+
+                // check answer begin part
+                if (ranPlusOrMinus == 2) {
+                    answer = "" + ((num1 * num2) + (num1 * num3));
+                } else if (ranPlusOrMinus == 1) {
+                    answer = "" + ((num1 * num2) - (num1 * num3));
+                }
+                // check answer end part
+
+                if (ranPlusOrMinus == 2) {
+                    question = num1 + "(" + num2 + " + " + num3 + ")" + " = ";
+                } else if (ranPlusOrMinus == 1){
+                    question = num1 + "(" + num2 + " - " + num3 + ")" + " = ";
+                }
+            }
+        } else if (questionType == 8) {
+            int num1, num2;
+            double min, max;
+
+            if (levelNum >= 1 && levelNum <= 100) {
+
+                min = levelNum;
+                max = levelNum * 2 + 2;
+                num1 = (int) (Math.random() * (max - min + 1) + min);
+                num2 = (int) (Math.random() * (max - min + 1) + min);
+
+                int ranNegPosNum1 = (int) (Math.random() * 2 + 1);
+                int ranNegPosNum2 = (int) (Math.random() * 2 + 1);
+                if (ranNegPosNum1 == 2) { ranNegPosNum1 = -1; num1 *= ranNegPosNum1; }
+                if (ranNegPosNum2 == 2) { ranNegPosNum2 = -1; num2 *= ranNegPosNum2; }
+
+                int ranBracketsPlacement = (int) (Math.random() * 2 + 1);
+
+                // check answer begin part
+                if (ranBracketsPlacement == 1) {
+                    answer = "" + (num2);
+                } else if (ranBracketsPlacement == 2) {
+                    answer = "" + (num1);
+                }
+                // check answer end part
+
+                if (ranBracketsPlacement == 1) {
+                    question = num1 + "(1/" + num1 + " * " + num2 + ")" + " = ";
+                } else if (ranBracketsPlacement == 2){
+                    question = "(1/" + num2 + " * " + num1 + ")" + num2 + " = ";
+                }
+            }
+        } else if (questionType == 9) {
+            int num1;
+            double min, max;
+
+            if (levelNum >= 1 && levelNum <= 100) {
+                min = levelNum;
+                max = levelNum * 2 + 2;
+                num1 = (int) (Math.random() * (max - min + 1) + min);
+
+                int defaultAnswer = (int) (Math.random() * (max - min + 1) + min);
+                int ranNegPosNum1 = (int) (Math.random() * 2 + 1);
+                if (ranNegPosNum1 == 2) { ranNegPosNum1 = -1; num1 *= ranNegPosNum1; }
+
+                // check answer begin part
+                answer = "" + (defaultAnswer);
+                // check answer end part
+
+                question = num1 + "x" + " = " + (defaultAnswer * num1) + "x" + ". x = ";
             }
         }
         return question;

@@ -101,6 +101,39 @@
                 android:text="@string/dividing_signed_numbers"
                 android:textSize="20sp"
                 android:background="@color/neon_orange"/>
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/distributive_property"
+                android:textSize="20sp"
+                android:background="@color/neon_orange"/>
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/associative_rule"
+                android:textSize="20sp"
+                android:background="@color/neon_orange"/>
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:text="@string/solve_basic_equations"
+                android:textSize="20sp"
+                android:background="@color/neon_orange"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
